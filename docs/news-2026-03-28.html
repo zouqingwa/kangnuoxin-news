@@ -307,43 +307,46 @@
         }
 
         .card-header {
-            padding: 20px 24px 0;
+            padding: 24px 24px 0;
             display: flex; align-items: flex-start; gap: 16px;
-        }
-        .card-index-wrap {
-            flex-shrink: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-        }
-        .card-tag {
-            display: inline-block;
-            font-size: 0.65rem; font-weight: 600;
-            padding: 3px 10px; border-radius: 6px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            border: 1px solid currentColor;
-            border-color: color-mix(in srgb, currentColor 30%, transparent);
-            white-space: nowrap;
+            position: relative;
         }
         .card-index {
+            flex-shrink: 0;
             display: flex; align-items: center; justify-content: center;
-            width: 48px; height: 48px;
+            width: 44px; height: 44px;
             background: linear-gradient(135deg, var(--brand-dim), rgba(0,212,170,0.05));
             color: var(--brand);
             font-family: 'LXGW WenKai', serif;
-            font-size: 1.3rem; font-weight: 700;
-            border-radius: 14px;
+            font-size: 1.2rem; font-weight: 700;
+            border-radius: 12px;
             border: 1px solid rgba(0,212,170,0.2);
             box-shadow: 0 4px 15px rgba(0,212,170,0.15);
             transition: all .3s ease;
+            margin-top: 2px;
         }
         .news-card:hover .card-index {
             transform: scale(1.08);
             box-shadow: 0 6px 20px rgba(0,212,170,0.25);
         }
-        .card-meta { flex: 1; padding-top: 28px; }
+        .card-tag {
+            position: absolute;
+            top: 16px; right: 20px;
+            font-size: 0.7rem; font-weight: 600;
+            padding: 5px 14px; border-radius: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 1px solid currentColor;
+            border-color: color-mix(in srgb, currentColor 30%, transparent);
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: all .3s ease;
+        }
+        .news-card:hover .card-tag {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .card-meta { flex: 1; padding-top: 6px; padding-right: 80px; }
         .card-title {
             font-family: 'LXGW WenKai', serif;
             font-size: 1.1rem; font-weight: 600;
@@ -721,13 +724,11 @@
 
         <article class="news-card">
             <div class="card-header">
-                <div class="card-index-wrap">
-                    <span class="card-tag" style="color:#FF6B6B;background:rgba(255,107,107,0.15)">政策法规</span>
-                    <div class="card-index" style="background:rgba(255,107,107,0.15);color:#FF6B6B;border-color:#FF6B6B30">1</div>
-                </div>
+                <div class="card-index" style="background:rgba(255,107,107,0.15);color:#FF6B6B;border-color:#FF6B6B30">1</div>
                 <div class="card-meta">
                     <h3 class="card-title">国家医保局发布"个人医保云"建设战略，AI医疗上升为国家战略</h3>
                 </div>
+                <span class="card-tag" style="color:#FF6B6B;background:rgba(255,107,107,0.15)">政策法规</span>
             </div>
             <div class="card-body">
                 <div class="section-label core">核心内容</div>
@@ -765,13 +766,11 @@
 
         <article class="news-card">
             <div class="card-header">
-                <div class="card-index-wrap">
-                    <span class="card-tag" style="color:#4ECDC4;background:rgba(78,205,196,0.15)">行业标准</span>
-                    <div class="card-index" style="background:rgba(78,205,196,0.15);color:#4ECDC4;border-color:#4ECDC430">2</div>
-                </div>
+                <div class="card-index" style="background:rgba(78,205,196,0.15);color:#4ECDC4;border-color:#4ECDC430">2</div>
                 <div class="card-meta">
                     <h3 class="card-title">长三角四省市联合发布《可穿戴式心电记录设备产品技术审评要点》</h3>
                 </div>
+                <span class="card-tag" style="color:#4ECDC4;background:rgba(78,205,196,0.15)">行业标准</span>
             </div>
             <div class="card-body">
                 <div class="section-label core">核心内容</div>
@@ -805,13 +804,11 @@
 
         <article class="news-card">
             <div class="card-header">
-                <div class="card-index-wrap">
-                    <span class="card-tag" style="color:#A78BFA;background:rgba(167,139,250,0.15)">市场报告</span>
-                    <div class="card-index" style="background:rgba(167,139,250,0.15);color:#A78BFA;border-color:#A78BFA30">3</div>
-                </div>
+                <div class="card-index" style="background:rgba(167,139,250,0.15);color:#A78BFA;border-color:#A78BFA30">3</div>
                 <div class="card-meta">
                     <h3 class="card-title">中商产业研究院发布中国可穿戴健康设备市场规模预测</h3>
                 </div>
+                <span class="card-tag" style="color:#A78BFA;background:rgba(167,139,250,0.15)">市场报告</span>
             </div>
             <div class="card-body">
                 <div class="section-label core">核心内容</div>
@@ -846,13 +843,11 @@
 
         <article class="news-card">
             <div class="card-header">
-                <div class="card-index-wrap">
-                    <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15)">产品技术</span>
-                    <div class="card-index" style="background:rgba(0,212,170,0.15);color:#00D4AA;border-color:#00D4AA30">4</div>
-                </div>
+                <div class="card-index" style="background:rgba(0,212,170,0.15);color:#00D4AA;border-color:#00D4AA30">4</div>
                 <div class="card-meta">
                     <h3 class="card-title">SKG小警卫手表确立行业"主动预警"新标准</h3>
                 </div>
+                <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15)">产品技术</span>
             </div>
             <div class="card-body">
                 <div class="section-label core">核心内容</div>
@@ -884,13 +879,11 @@
 
         <article class="news-card">
             <div class="card-header">
-                <div class="card-index-wrap">
-                    <span class="card-tag" style="color:#E8B86D;background:rgba(232,184,109,0.15)">投融资</span>
-                    <div class="card-index" style="background:rgba(232,184,109,0.15);color:#E8B86D;border-color:#E8B86D30">5</div>
-                </div>
+                <div class="card-index" style="background:rgba(232,184,109,0.15);color:#E8B86D;border-color:#E8B86D30">5</div>
                 <div class="card-meta">
                     <h3 class="card-title">OdyssLife完成近2亿元融资，红杉中国领投AI健康硬件</h3>
                 </div>
+                <span class="card-tag" style="color:#E8B86D;background:rgba(232,184,109,0.15)">投融资</span>
             </div>
             <div class="card-body">
                 <div class="section-label core">核心内容</div>
