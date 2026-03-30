@@ -136,14 +136,14 @@
         .nav-back:hover::before { opacity: 1; }
         .nav-back-arrow { font-size: 1rem; transition: transform .2s; }
         .nav-back:hover .nav-back-arrow { transform: translateX(-3px); }
-        .nav-brand { 
-            font-family:'LXGW WenKai',serif; 
-            font-size:1.15rem; 
-            color:var(--brand); 
-            font-weight:700; 
-            letter-spacing:1px;
-            text-shadow: 0 0 20px var(--brand-glow);
+        .nav-logo {
+            height: 26px;
+            width: auto;
+            display: block;
+            filter: brightness(0) invert(1) opacity(0.9);
+            transition: opacity .25s;
         }
+        .nav-logo:hover { opacity: 0.7; }
         .nav-date {
             font-size: 0.75rem; 
             color: var(--brand);
@@ -699,7 +699,9 @@
             <span class="nav-back-arrow">&#8592;</span>
             <span>返回首页</span>
         </a>
-        <span class="nav-brand">康诺芯</span>
+        <span class="nav-brand-wrap" style="display:flex;align-items:center;">
+            <img src="knx-logo.png" alt="康诺芯" class="nav-logo">
+        </span>
         <span class="nav-date">2026年3月30日</span>
     </nav>
 
@@ -732,7 +734,7 @@
     <footer class="footer">
         <div class="footer-brand">康诺芯</div>
         <div class="footer-slogan">智芯见康，至心相伴</div>
-        <div class="footer-meta">报告生成时间：2026/03/30 15:17</div>
+        <div class="footer-meta">报告生成时间：2026/03/30 15:42</div>
     </footer>
 
     <!-- Back to Top -->
