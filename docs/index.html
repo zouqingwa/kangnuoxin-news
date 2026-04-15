@@ -195,6 +195,13 @@
         .archive-arrow { color:var(--text-dim); transition:color .2s; }
         .archive-item:hover .archive-arrow { color:var(--brand); }
         .archive-empty { text-align:center; padding:32px; color:var(--text-dim); font-size:0.85rem; }
+        .archive-expand {
+            display:block; width:100%; padding:12px; margin-top:8px;
+            background:transparent; border:1px dashed var(--card-border); border-radius:8px;
+            color:var(--text-sec); font-size:0.85rem; cursor:pointer; transition:all .25s;
+        }
+        .archive-expand:hover { border-color:var(--brand); color:var(--brand); }
+        .archive-hidden { display:none; flex-direction:column; gap:10px; }
 
         /* === Footer === */
         .footer {
@@ -358,6 +365,38 @@
                         <span class="archive-badge">最新</span>
                         <span class="archive-arrow">→</span>
                     </a>
+                    <button class="archive-expand" onclick="document.getElementById('archive-hidden').style.display='flex';this.style.display='none'">查看更多（5条）</button>
+                    <div id="archive-hidden" class="archive-hidden">
+                    <a href="news-2026-04-01.html" class="archive-item" style="animation-delay:0.72s">
+                        <span class="archive-date">2026年04月01日</span>
+                        
+                        <span class="archive-arrow">→</span>
+                    </a>
+
+                    <a href="news-2026-03-31.html" class="archive-item" style="animation-delay:0.78s">
+                        <span class="archive-date">2026年03月31日</span>
+                        
+                        <span class="archive-arrow">→</span>
+                    </a>
+
+                    <a href="news-2026-03-30.html" class="archive-item" style="animation-delay:0.84s">
+                        <span class="archive-date">2026年03月30日</span>
+                        
+                        <span class="archive-arrow">→</span>
+                    </a>
+
+                    <a href="news-2026-03-28.html" class="archive-item" style="animation-delay:0.8999999999999999s">
+                        <span class="archive-date">2026年03月28日</span>
+                        
+                        <span class="archive-arrow">→</span>
+                    </a>
+
+                    <a href="news-2026-03-27.html" class="archive-item" style="animation-delay:0.96s">
+                        <span class="archive-date">2026年03月27日</span>
+                        
+                        <span class="archive-arrow">→</span>
+                    </a>
+                    </div>
         </div>
     </section>
 
