@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#0B1426">
-    <title>2026年3月30日 · 康诺芯行业要闻</title>
+    <title>2026年4月20日 · 康诺芯行业要闻</title>
     <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai@latest/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -137,7 +137,7 @@
         .nav-back-arrow { font-size: 1rem; transition: transform .2s; }
         .nav-back:hover .nav-back-arrow { transform: translateX(-3px); }
         .nav-logo {
-            height: 22px;
+            height: 21px;
             width: auto;
             display: block;
             filter: brightness(0) invert(1) opacity(0.9);
@@ -145,10 +145,10 @@
         }
         .nav-brand-text {
             font-family: 'LXGW WenKai', serif;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: var(--brand);
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-left: 8px;
             text-shadow: 0 0 14px var(--brand-glow);
             line-height: 1;
@@ -477,6 +477,56 @@
             50% { transform: scale(1.3); opacity: 0.8; }
         }
 
+        /* ===== Quick Glance Section (扩展快览) ===== */
+        .quick-glance-section {
+            margin: 16px 16px 0;
+            background: linear-gradient(135deg, var(--surface) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .quick-glance-section::before {
+            content: '';
+            position: absolute; top:0; left:0; right:0; height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--brand), var(--gold));
+        }
+        .quick-glance-header {
+            padding: 20px 24px 12px;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .quick-glance-title-label {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.2rem; font-weight: 700;
+            color: var(--gold);
+            text-shadow: 0 0 12px var(--gold-dim);
+        }
+        .quick-glance-title-accent {
+            flex: 1; height: 1px;
+            background: linear-gradient(90deg, var(--gold-dim), transparent);
+        }
+        .quick-glance-body {
+            padding: 0 24px 20px;
+        }
+        .quick-glance-item {
+            display: flex; align-items: baseline; gap: 8px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+        .quick-glance-item:last-child { border-bottom: none; }
+        .quick-glance-pin { font-size: 0.85rem; flex-shrink: 0; }
+        .quick-glance-domain {
+            color: var(--brand); font-weight: 600; flex-shrink: 0;
+            padding: 2px 8px; border-radius: 8px;
+            background: var(--brand-dim); font-size: 0.78rem;
+        }
+        .quick-glance-sep { color: var(--text-dim); flex-shrink: 0; }
+        .quick-glance-title { color: var(--text-bright); font-weight: 500; }
+        .quick-glance-dash { color: var(--text-dim); flex-shrink: 0; }
+        .quick-glance-summary { color: var(--text-sec); }
+
         /* ===== Summary Section ===== */
         .summary-section {
             margin: 16px 16px 0;
@@ -673,6 +723,7 @@
         @media (min-width: 640px) {
             .news-list { max-width: 720px; margin: 0 auto; }
             .summary-section { max-width: 720px; margin-left: auto; margin-right: auto; }
+            .quick-glance-section { max-width: 720px; margin-left: auto; margin-right: auto; }
             .page-header { padding-left: 40px; padding-right: 40px; }
         }
 
@@ -712,7 +763,7 @@
             <img src="knx-logo.png" alt="康诺芯" class="nav-logo">
             <span class="nav-brand-text">康诺芯</span>
         </span>
-        <span class="nav-date">2026年3月30日</span>
+        <span class="nav-date">2026年4月20日</span>
     </nav>
 
     <!-- Page Header -->
@@ -727,14 +778,160 @@
             <span>行业每日要闻</span>
         </div>
         <h1 class="header-title">康诺芯行业每日要闻</h1>
-        <p class="header-sub">可穿戴健康监测 · AI辅助诊断 · 每日精选</p>
+        <p class="header-sub">可穿戴健康监测 · AI辅助诊断 · 慢病管理 · 县域医共体 · 每日精选</p>
         <div class="header-divider"></div>
     </header>
 
     <!-- News List -->
     <div class="news-list">
         
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(255,107,107,0.15);color:#FF6B6B;border-color:#FF6B6B30">1</div>
+                <div class="card-meta">
+                    <h3 class="card-title">FDA放宽低风险可穿戴设备和健康软件监管要求，明确非医疗健康技术边界</h3>
+                </div>
+                <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15);border-color:#00D4AA40">产品技术</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>美国食品药品监督管理局（FDA）于2026年4月中旬发布草案，计划放宽对低风险可穿戴设备和健康管理软件的监管要求。该草案明确将非医疗健康技术（如心率监测、步数追踪等）与医疗器械区分开来，低风险设备不再适用与医疗器械相同的上市前监管要求。同时，FDA强调仍将维持对具有临床宣称（如疾病诊断、治疗建议）产品的安全保障。此举旨在促进健康科技创新，降低企业合规成本，同时确保患者安全。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content"><p>FDA监管松绑为康诺芯可穿戴设备出海美国市场提供了更清晰的合规路径。公司可依据新规将部分健康监测功能（如心率变异性分析、睡眠质量评估）定义为“一般健康产品”，从而加速产品上市周期。同时，监管边界明确有助于公司在“医疗级”与“消费级”产品线之间精准定位，针对不同市场制定差异化策略。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>[MedTech World]：https://med-tech.world/zh/news/fda-relaxes-rules-low-risk-wearables-wellness-software/</li><br/><li>[Lexology FDA in Flux Newsletter]：https://www.lexology.com/library/detail.aspx?g=1d839c79-8392-4352-9239-c840ea6f26d7</li></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">7分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(232,184,109,0.15);color:#E8B86D;border-color:#E8B86D30">2</div>
+                <div class="card-meta">
+                    <h3 class="card-title">2026医疗可穿戴爆发！医疗级认证产品覆盖心电、血压、血糖全闭环</h3>
+                </div>
+                <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15);border-color:#00D4AA40">产品技术</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content">2026年医疗可穿戴市场迎来爆发式增长，不同于普通智能手环的“参考级监测”，新一代产品均带有“医疗级认证”硬实力。CN-WitMed行业报告指出，当前产品已覆盖心电、血压、血糖等核心健康场景，部分领先企业甚至实现了“监测-预警-干预”全闭环。技术层面，柔性电子、微型传感器、低功耗芯片等进步使得医疗级精度得以在腕戴设备上实现；监管层面，国家药监局简化可穿戴医疗设备审批流程，推动医疗级功能快速落地。</div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content"><p>康诺芯在心电长程监测和腕式血氧领域已有技术积累，医疗级认证趋势验证了公司技术路线的正确性。报告揭示的“全闭环”模式与公司AI伴随式辅诊智能体战略高度契合，公司可加速从监测向预警、干预环节延伸，构建更完整的“检筛诊管”闭环。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>[CN-WitMed行业报告]：http://www.cn-witmed.com/list/35/19742.html</li><br/><ul><li>[新浪财经智能手表行业展望]：https://cj.sina.com.cn/articles/view/7857141524/1d452771401901xepm?froms=ggmp</li></ul></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">11分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(167,139,250,0.15);color:#A78BFA;border-color:#A78BFA30">3</div>
+                <div class="card-meta">
+                    <h3 class="card-title">WHOOP以101亿美元估值完成5.75亿美元G轮融资，可穿戴健康平台全球化加速</h3>
+                </div>
+                <span class="card-tag" style="color:#E8B86D;background:rgba(232,184,109,0.15);border-color:#E8B86D40">资本动态</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>人体表现科技公司WHOOP于2026年3月31日宣布完成5.75亿美元G轮融资，估值达101亿美元。本轮融资由Collaborative Fund领投，资金将用于推进全球扩张和个性化健康长期愿景。WHOOP主打订阅制健康监测服务，通过腕戴设备采集心率变异性、睡眠质量、恢复状态等数据，结合AI算法提供个性化健康建议。该公司已与NBA、NFL等多个职业体育联盟合作，同时向大众健康市场拓展。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content"><p>WHOOP的百亿美元估值印证了“硬件+数据+订阅服务”商业模式的可行性，为康诺芯提供了可参考的定价与服务设计范本。其与职业体育联盟的合作展示了可穿戴设备在专业健康管理场景的应用价值，康诺芯可借鉴此模式拓展医院、企业健康管理等B端渠道。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>[BusinessWire官方新闻稿]：https://www.businesswire.com/news/home/20260331790224/zh-CN</li><br/><li>[OFweek医械科技网报道]：https://www.ofweek.com/medical/2026-04/ART-12005-11111-30685321.html</li></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">10分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(0,212,170,0.15);color:#00D4AA;border-color:#00D4AA30">4</div>
+                <div class="card-meta">
+                    <h3 class="card-title">国家卫健委启动基层医疗卫生机构医疗质量改善三年行动（2026-2028），慢病管理能力建设列为重点</h3>
+                </div>
+                <span class="card-tag" style="color:#FF6B6B;background:rgba(255,107,107,0.15);border-color:#FF6B6B40">政策法规</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>国家卫生健康委员会于2026年4月1日发布《关于开展基层医疗卫生机构医疗质量改善三年行动（2026—2028年）的通知》。行动目标为：到2026年底，覆盖全国中心乡镇卫生院及床位30张以上的社区卫生服务中心，健全医疗质量管理制度；到2027年底，覆盖所有乡镇卫生院和社区卫生服务中心；到2028年底，基层医疗质量管理制度全面建立并常态化运行。行动将慢性病管理能力建设作为重点任务，要求提升高血压、糖尿病等常见慢病的规范化管理率。</p><p><strong>【战略关联】✅ 通过测试</strong><br/><li><strong>需求侧验证</strong>：行动要求提升慢病管理能力，直接创造了对可穿戴健康监测设备（如家庭血压计、血糖仪、心电贴片）的需求，用于患者居家监测和数据上传。</li><br/><li><strong>供给侧机遇</strong>：基层医疗机构设备采购渠道打开，为康诺芯县域市场拓展提供了政策窗口。</li></ul></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content"><p>该行动为康诺芯慢病管理产品进入基层医疗机构提供了明确的政策入口。公司可针对性开发符合基层使用场景的集成化监测设备（如多参数一体机），并配套数据管理平台，帮助基层机构实现慢病患者的远程监测与管理。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><ul><li>[国家卫健委官网通知]：https://www.nhc.gov.cn/jws/c100072/202604/1f735b953d26475c9ed27c96f2e20e1f.shtml</li><br/><li>[新京报报道]：https://www.bjnews.com.cn/detail/1776052746129662.html</li></ul></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">9分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(78,205,196,0.15);color:#4ECDC4;border-color:#4ECDC430">5</div>
+                <div class="card-meta">
+                    <h3 class="card-title">国家卫生健康委宣布：我国紧密型县域医共体建设实现全覆盖</h3>
+                </div>
+                <span class="card-tag" style="color:#FF6B6B;background:rgba(255,107,107,0.15);border-color:#FF6B6B40">政策法规</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>2026年4月13日，国家卫生健康委在国务院政策例行吹风会上宣布，我国紧密型县域医共体建设已实现全覆盖。自2023年启动以来，全国所有县域均已建立紧密型医共体，实现了县域内各级医疗卫生机构在人员、技术、服务、管理方面的协同合作。下一步将重点推进医共体内涵建设，推动实现一般疾病在市县解决、日常疾病在基层解决，并规范医共体内部管理。</p><p><strong>【战略关联】✅ 通过测试</strong><br/><li><strong>供给侧机遇</strong>：医共体全覆盖意味着县域医疗设备采购将趋于集中化、标准化，为康诺芯等国产医疗设备厂商提供了规模化入场机会。</li><br/><li><strong>需求侧验证</strong>：医共体强调“基层解决日常疾病”，远程监测、家庭监测设备需求将随之下沉到县域。</li></ul></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content"><p>县域医共体全覆盖为康诺芯打开了县域市场的大门。公司可将可穿戴监测设备纳入医共体统一采购目录，并探索“设备+平台+服务”打包方案，帮助医共体实现居民健康数据的连续采集与共享。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><ul><li>[新华网报道]：https://www.news.cn/politics/20260413/3e4fc212c0f947ed96aaabaed7a7160b/c.html</li></ul><br/><li>[人民健康网报道]：http://health.people.com.cn/n1/2026/0413/c14739-40700305.html</li></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">9分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
     </div>
+
+    <!-- Quick Glance (扩展快览) -->
+    
+    <section class="quick-glance-section">
+        <div class="quick-glance-header">
+            <h2 class="quick-glance-title-label">扩展快览</h2>
+            <span class="quick-glance-title-accent"></span>
+        </div>
+        <div class="quick-glance-body">
+            <div class="quick-glance-item">
+                <span class="quick-glance-pin">📌</span>
+                <span class="quick-glance-domain">慢病管理</span>
+                <span class="quick-glance-sep">|</span>
+                <span class="quick-glance-title">国家医保局：2026年居民医保基金常见慢性病按人头付费在全市紧密型县域医共体全面推开</span>
+                <span class="quick-glance-dash">—</span>
+                <span class="quick-glance-summary">支付方式改革激励基层加强慢病管理，创造远程监测设备需求</span>
+            </div>
+
+            <div class="quick-glance-item">
+                <span class="quick-glance-pin">📌</span>
+                <span class="quick-glance-domain">慢病管理</span>
+                <span class="quick-glance-sep">|</span>
+                <span class="quick-glance-title">基层医疗机构可为慢病患者开具不超过12周的长期处方</span>
+                <span class="quick-glance-dash">—</span>
+                <span class="quick-glance-summary">长处方政策提升用药依从性，同步需要患者居家监测数据以确保用药安全</span>
+            </div>
+        </div>
+    </section>
 
     <!-- Summary Section -->
     
@@ -744,7 +941,7 @@
     <footer class="footer">
         <div class="footer-brand">康诺芯</div>
         <div class="footer-slogan">智芯见康，至心相伴</div>
-        <div class="footer-meta">报告生成时间：2026/03/30 15:46</div>
+        <div class="footer-meta">报告生成时间：2026/04/20 11:10</div>
     </footer>
 
     <!-- Back to Top -->
@@ -806,7 +1003,7 @@
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        document.querySelectorAll('.news-card, .summary-section').forEach(function(el) {
+        document.querySelectorAll('.news-card, .summary-section, .quick-glance-section').forEach(function(el) {
             observer.observe(el);
         });
     })();

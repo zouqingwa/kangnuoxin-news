@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#0B1426">
-    <title>2026年3月30日 · 康诺芯行业要闻</title>
+    <title>2026年4月18日 · 康诺芯行业要闻</title>
     <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai@latest/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -137,7 +137,7 @@
         .nav-back-arrow { font-size: 1rem; transition: transform .2s; }
         .nav-back:hover .nav-back-arrow { transform: translateX(-3px); }
         .nav-logo {
-            height: 22px;
+            height: 21px;
             width: auto;
             display: block;
             filter: brightness(0) invert(1) opacity(0.9);
@@ -145,10 +145,10 @@
         }
         .nav-brand-text {
             font-family: 'LXGW WenKai', serif;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: var(--brand);
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-left: 8px;
             text-shadow: 0 0 14px var(--brand-glow);
             line-height: 1;
@@ -477,6 +477,56 @@
             50% { transform: scale(1.3); opacity: 0.8; }
         }
 
+        /* ===== Quick Glance Section (扩展快览) ===== */
+        .quick-glance-section {
+            margin: 16px 16px 0;
+            background: linear-gradient(135deg, var(--surface) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .quick-glance-section::before {
+            content: '';
+            position: absolute; top:0; left:0; right:0; height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--brand), var(--gold));
+        }
+        .quick-glance-header {
+            padding: 20px 24px 12px;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .quick-glance-title-label {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.2rem; font-weight: 700;
+            color: var(--gold);
+            text-shadow: 0 0 12px var(--gold-dim);
+        }
+        .quick-glance-title-accent {
+            flex: 1; height: 1px;
+            background: linear-gradient(90deg, var(--gold-dim), transparent);
+        }
+        .quick-glance-body {
+            padding: 0 24px 20px;
+        }
+        .quick-glance-item {
+            display: flex; align-items: baseline; gap: 8px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+        .quick-glance-item:last-child { border-bottom: none; }
+        .quick-glance-pin { font-size: 0.85rem; flex-shrink: 0; }
+        .quick-glance-domain {
+            color: var(--brand); font-weight: 600; flex-shrink: 0;
+            padding: 2px 8px; border-radius: 8px;
+            background: var(--brand-dim); font-size: 0.78rem;
+        }
+        .quick-glance-sep { color: var(--text-dim); flex-shrink: 0; }
+        .quick-glance-title { color: var(--text-bright); font-weight: 500; }
+        .quick-glance-dash { color: var(--text-dim); flex-shrink: 0; }
+        .quick-glance-summary { color: var(--text-sec); }
+
         /* ===== Summary Section ===== */
         .summary-section {
             margin: 16px 16px 0;
@@ -673,6 +723,7 @@
         @media (min-width: 640px) {
             .news-list { max-width: 720px; margin: 0 auto; }
             .summary-section { max-width: 720px; margin-left: auto; margin-right: auto; }
+            .quick-glance-section { max-width: 720px; margin-left: auto; margin-right: auto; }
             .page-header { padding-left: 40px; padding-right: 40px; }
         }
 
@@ -712,7 +763,7 @@
             <img src="knx-logo.png" alt="康诺芯" class="nav-logo">
             <span class="nav-brand-text">康诺芯</span>
         </span>
-        <span class="nav-date">2026年3月30日</span>
+        <span class="nav-date">2026年4月18日</span>
     </nav>
 
     <!-- Page Header -->
@@ -727,14 +778,155 @@
             <span>行业每日要闻</span>
         </div>
         <h1 class="header-title">康诺芯行业每日要闻</h1>
-        <p class="header-sub">可穿戴健康监测 · AI辅助诊断 · 每日精选</p>
+        <p class="header-sub">可穿戴健康监测 · AI辅助诊断 · 慢病管理 · 县域医共体 · 每日精选</p>
         <div class="header-divider"></div>
     </header>
 
     <!-- News List -->
     <div class="news-list">
         
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(255,107,107,0.15);color:#FF6B6B;border-color:#FF6B6B30">1</div>
+                <div class="card-meta">
+                    <h3 class="card-title">可穿戴医疗设备行业三大转型：消费级走向医疗级，从健康管理延伸至疾病诊疗</h3>
+                </div>
+                <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15);border-color:#00D4AA40">产品技术</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content">---</div>
+                
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><ul><li>中研网：https://www.chinairn.com/news/20260417/120107589.shtml</li><br/><li>动脉网（行业报告跟踪）：https://www.vbdata.cn/intelDetail/986122</li></ul><p><strong>【相关度评分】11分</strong>（A=4，B=2，C=1，D=0，E=2，F=2；合计=11）</p></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">11分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(232,184,109,0.15);color:#E8B86D;border-color:#E8B86D30">2</div>
+                <div class="card-meta">
+                    <h3 class="card-title">国家医保局发布2026年度第一批场景清单，"个人医保云"明确融合可穿戴设备数据</h3>
+                </div>
+                <span class="card-tag" style="color:#FF6B6B;background:rgba(255,107,107,0.15);border-color:#FF6B6B40">政策法规</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content">---</div>
+                
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><ul><li>新华网/人民日报：https://www.news.cn/government/20260415/3d2d8c0901bd4a20a325f55f23c6cd33/c.html</li><br/><li>国家医保局官网：https://www.nhsa.gov.cn/art/2026/4/10/art_14_20171.html</li></ul><p><strong>【相关度评分】12分</strong>（A=3，B=1，C=2，D=1，E=2，F=3；合计=12）</p></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">12分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(167,139,250,0.15);color:#A78BFA;border-color:#A78BFA30">3</div>
+                <div class="card-meta">
+                    <h3 class="card-title">医保局基层新政落地：基层医院将配备AI医生，每人每年获赠1000元虚拟就医额度</h3>
+                </div>
+                <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15);border-color:#00D4AA40">产品技术</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content">---</div>
+                
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>CCTV上海：https://www.cctv.sh/news/cctv-ARTIEbkHNEPeh5TIR2a3jvKu260412</li><br/><ul><li>国家医保局：https://www.nhsa.gov.cn/art/2026/4/10/art_14_20171.html</li><br/><li>央视新闻：https://news.cctv.com/2026/03/16/ARTIg0Lpf52d6tBItOekNX7t260316.shtml</li></ul><p><strong>【相关度评分】11分</strong>（A=1，B=3，C=2，D=1，E=1，F=3；合计=11）</p></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">11分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(0,212,170,0.15);color:#00D4AA;border-color:#00D4AA30">4</div>
+                <div class="card-meta">
+                    <h3 class="card-title">医疗AI从"技术模型"到"场景落地"：新华网深度调研三甲医院AI应用现状与挑战</h3>
+                </div>
+                <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15);border-color:#00D4AA40">产品技术</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content">---</div>
+                
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><ul><li>新华网/经济参考报：https://www3.xinhuanet.com/tech/20260415/ddfdbcb12bc94eaf968dd314424f3582/c.html</li><br/><li>国家卫健委《AI+医疗卫生实施意见》：https://www.nhc.gov.cn/guihuaxxs/c100133/202511/d1a42ae835c743b9b3e83ac0253c3e9f.shtml</li></ul><p><strong>【相关度评分】9分</strong>（A=0，B=3，C=2，D=1，E=1，F=2；合计=9）</p></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">9分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(78,205,196,0.15);color:#4ECDC4;border-color:#4ECDC430">5</div>
+                <div class="card-meta">
+                    <h3 class="card-title">乐活元启动新一轮融资，穿戴式AI健康手表量产冲刺慢病管理赛道</h3>
+                </div>
+                <span class="card-tag" style="color:#E8B86D;background:rgba(232,184,109,0.15);border-color:#E8B86D40">资本动态</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content">---</div>
+                
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><ul><li>36氪：https://www.36kr.com/p/3740852407746561</li><br/><li>财联社：https://www.cls.cn/detail/2041727</li></ul><p><strong>【相关度评分】8分</strong>（A=3，B=2，C=1，D=0，E=0，F=2；合计=8）</p></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">8分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
     </div>
+
+    <!-- Quick Glance (扩展快览) -->
+    
+    <section class="quick-glance-section">
+        <div class="quick-glance-header">
+            <h2 class="quick-glance-title-label">扩展快览</h2>
+            <span class="quick-glance-title-accent"></span>
+        </div>
+        <div class="quick-glance-body">
+            <div class="quick-glance-item">
+                <span class="quick-glance-pin">📌</span>
+                <span class="quick-glance-domain">慢病管理</span>
+                <span class="quick-glance-sep">|</span>
+                <span class="quick-glance-title">深圳慢病中心推进持续葡萄糖监测系统基层应用推广</span>
+                <span class="quick-glance-dash">—</span>
+                <span class="quick-glance-summary">—3月27日在宝安区举办培训，推进CGM先进技术在基层糖尿病管理中的应用</span>
+            </div>
+
+            <div class="quick-glance-item">
+                <span class="quick-glance-pin">📌</span>
+                <span class="quick-glance-domain">县域医共体</span>
+                <span class="quick-glance-sep">|</span>
+                <span class="quick-glance-title">沈阳部署卫生健康信息化对接省级智慧医疗平台</span>
+                <span class="quick-glance-dash">—</span>
+                <span class="quick-glance-summary">—4月9日召开专题培训，推进全市医疗机构与辽宁省智慧化管理平台高效对接</span>
+            </div>
+        </div>
+    </section>
 
     <!-- Summary Section -->
     
@@ -744,7 +936,7 @@
     <footer class="footer">
         <div class="footer-brand">康诺芯</div>
         <div class="footer-slogan">智芯见康，至心相伴</div>
-        <div class="footer-meta">报告生成时间：2026/03/30 15:46</div>
+        <div class="footer-meta">报告生成时间：2026/04/18 15:55</div>
     </footer>
 
     <!-- Back to Top -->
@@ -806,7 +998,7 @@
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        document.querySelectorAll('.news-card, .summary-section').forEach(function(el) {
+        document.querySelectorAll('.news-card, .summary-section, .quick-glance-section').forEach(function(el) {
             observer.observe(el);
         });
     })();
