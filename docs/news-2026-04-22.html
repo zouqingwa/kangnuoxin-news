@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0B1426">
+    <title>2026年4月22日 · 康诺芯行业要闻</title>
+    <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai@latest/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0B1426;
+            --bg-deep: #060D1A;
+            --surface: rgba(255,255,255,0.03);
+            --surface-hover: rgba(255,255,255,0.06);
+            --surface-active: rgba(255,255,255,0.08);
+            --brand: #00D4AA;
+            --brand-dim: rgba(0,212,170,0.12);
+            --brand-glow: rgba(0,212,170,0.25);
+            --gold: #E8B86D;
+            --gold-dim: rgba(232,184,109,0.12);
+            --border: rgba(255,255,255,0.07);
+            --border-light: rgba(255,255,255,0.04);
+            --text: #D8DEE6;
+            --text-bright: #F0F4F8;
+            --text-sec: #8899AA;
+            --text-dim: #4A5B6E;
+            --tag-policy: #FF6B6B;
+            --tag-standard: #4ECDC4;
+            --tag-market: #A78BFA;
+            --tag-tech: #00D4AA;
+            --tag-funding: #E8B86D;
+            --safe-top: env(safe-area-inset-top, 0px);
+            --safe-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+        html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; overflow-x:hidden; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.75;
+            min-height: 100vh;
+            padding-top: var(--safe-top);
+        }
+
+        /* ===== Ambient Background ===== */
+        .ambient-bg {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .ambient-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(ellipse 80% 50% at 20% 40%, rgba(0,212,170,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(232,184,109,0.05) 0%, transparent 40%);
+            animation: ambientMove 20s ease-in-out infinite;
+        }
+        @keyframes ambientMove {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(2%, 2%) rotate(1deg); }
+            66% { transform: translate(-1%, 1%) rotate(-1deg); }
+        }
+
+        /* ===== Reading Progress Bar ===== */
+        .progress-bar {
+            position: fixed; top:0; left:0; height: 3px; z-index: 200;
+            background: linear-gradient(90deg, var(--brand), var(--gold));
+            width: 0%; 
+            transition: width .1s linear;
+            box-shadow: 0 0 10px var(--brand-glow);
+        }
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            right: 0; top: 0; bottom: 0;
+            width: 100px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4));
+            animation: progressGlow 2s ease-in-out infinite;
+        }
+        @keyframes progressGlow {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        /* ===== Top Navigation ===== */
+        .top-nav {
+            position: sticky; top:0; z-index:100;
+            display:flex; align-items:center; justify-content:space-between;
+            padding: 12px 20px;
+            background: rgba(11,20,38,0.85);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border);
+            transition: all .3s ease;
+        }
+        .top-nav.scrolled {
+            background: rgba(11,20,38,0.95);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+        .nav-left { display:flex; align-items:center; gap:12px; }
+        .nav-back {
+            display:flex; align-items:center; gap:6px;
+            color: var(--text-sec); text-decoration:none; font-size:0.85rem;
+            padding: 8px 16px; 
+            border: 1px solid var(--border);
+            border-radius: 24px; 
+            transition: all .25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .nav-back::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--brand-dim), transparent);
+            opacity: 0;
+            transition: opacity .25s;
+        }
+        .nav-back:hover { 
+            border-color: var(--brand); 
+            color: var(--brand);
+            transform: translateX(-2px);
+        }
+        .nav-back:hover::before { opacity: 1; }
+        .nav-back-arrow { font-size: 1rem; transition: transform .2s; }
+        .nav-back:hover .nav-back-arrow { transform: translateX(-3px); }
+        .nav-logo {
+            height: 21px;
+            width: auto;
+            display: block;
+            filter: brightness(0) invert(1) opacity(0.9);
+            transition: opacity .25s;
+        }
+        .nav-brand-text {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.3rem;
+            color: var(--brand);
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-left: 8px;
+            text-shadow: 0 0 14px var(--brand-glow);
+            line-height: 1;
+        }
+        .nav-date {
+            font-size: 0.75rem; 
+            color: var(--brand);
+            background: var(--brand-dim);
+            padding: 5px 14px; 
+            border-radius: 20px;
+            border: 1px solid rgba(0,212,170,0.15);
+            font-weight: 500;
+        }
+
+        /* ===== Page Header ===== */
+        .page-header {
+            position: relative;
+            padding: clamp(40px,10vw,64px) 20px clamp(32px,8vw,48px);
+            text-align: center;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .page-header::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--brand-glow) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .page-header::after {
+            content: '';
+            position: absolute; bottom: 0; left: 10%; right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+        }
+        .header-eyebrow {
+            display: inline-flex; align-items:center; gap:10px;
+            font-size: 0.7rem; 
+            color: var(--brand);
+            letter-spacing: 3px; 
+            text-transform: uppercase;
+            margin-bottom: 16px; 
+            position: relative;
+            font-weight: 500;
+        }
+        .header-eyebrow::before, .header-eyebrow::after {
+            content: ''; width: 32px; height: 1px; 
+            background: linear-gradient(90deg, transparent, var(--brand));
+        }
+        .header-eyebrow::after {
+            background: linear-gradient(90deg, var(--brand), transparent);
+        }
+        .header-title {
+            font-family: 'LXGW WenKai', serif;
+            font-size: clamp(1.8rem, 7vw, 2.8rem);
+            font-weight: 700;
+            color: var(--text-bright);
+            line-height: 1.2;
+            margin-bottom: 12px;
+            position: relative;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+        .header-sub {
+            font-size: 0.95rem; 
+            color: var(--text-sec);
+            font-weight: 300; 
+            position: relative;
+            letter-spacing: 2px;
+        }
+        .header-divider {
+            width: 60px; height: 3px;
+            background: linear-gradient(90deg, var(--brand), var(--gold), var(--brand));
+            margin: 20px auto 0; 
+            border-radius: 3px;
+            position: relative;
+            box-shadow: 0 0 15px var(--brand-glow);
+        }
+
+        /* ===== Floating Particles ===== */
+        .particles {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .particle {
+            position: absolute;
+            width: 4px; height: 4px;
+            background: var(--brand);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 15s infinite ease-in-out;
+        }
+        .particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 80%; top: 40%; animation-delay: 3s; background: var(--gold); }
+        .particle:nth-child(3) { left: 30%; top: 60%; animation-delay: 6s; }
+        .particle:nth-child(4) { left: 70%; top: 80%; animation-delay: 9s; background: var(--gold); }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+            50% { transform: translateY(-30px) scale(1.2); opacity: 0.6; }
+        }
+
+        /* ===== News List ===== */
+        .news-list {
+            padding: 0 16px;
+            display: flex; 
+            flex-direction: column; 
+            gap: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== News Card ===== */
+        .news-card {
+            position: relative;
+            background: linear-gradient(135deg, var(--surface) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            opacity: 0;
+            animation: cardFadeIn .6s ease forwards;
+            transition: all .3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+            border-color: rgba(0,212,170,0.2);
+        }
+        .news-card:nth-child(1) { animation-delay: .1s; }
+        .news-card:nth-child(2) { animation-delay: .2s; }
+        .news-card:nth-child(3) { animation-delay: .3s; }
+        .news-card:nth-child(4) { animation-delay: .4s; }
+        .news-card:nth-child(5) { animation-delay: .5s; }
+        @keyframes cardFadeIn {
+            from { opacity:0; transform: translateY(24px) scale(0.98); }
+            to { opacity:1; transform: translateY(0) scale(1); }
+        }
+
+        /* Card Top Accent Line */
+        .news-card::before {
+            content: '';
+            position: absolute; top:0; left:0; right:0; height: 3px;
+            background: linear-gradient(90deg, var(--brand), var(--gold), transparent 70%);
+            opacity: 0.8;
+        }
+
+        /* Card Glow Effect */
+        .news-card::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0,212,170,0.1) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity .3s;
+            pointer-events: none;
+        }
+        .news-card:hover::after { opacity: 1; }
+
+        .card-header {
+            padding: 32px 24px 0;
+            display: flex; align-items: flex-start; gap: 16px;
+            position: relative;
+        }
+        .card-index {
+            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            width: 44px; height: 44px;
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.2rem; font-weight: 700;
+            border-radius: 12px;
+            border: 1px solid;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all .3s ease;
+            margin-top: 4px;
+        }
+        .news-card:hover .card-index {
+            transform: scale(1.08);
+        }
+        .card-tag {
+            position: absolute;
+            top: 24px; right: 20px;
+            font-size: 0.7rem; font-weight: 600;
+            padding: 5px 14px; border-radius: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 1px solid;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: all .3s ease;
+        }
+        .news-card:hover .card-tag {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .card-meta { flex: 1; padding-top: 6px; padding-right: 80px; }
+        .card-title {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.1rem; font-weight: 600;
+            color: var(--text-bright);
+            line-height: 1.5;
+            transition: color .3s;
+        }
+        .news-card:hover .card-title { color: var(--brand); }
+        .card-body { padding: 20px 24px 24px; }
+
+        /* Section Labels */
+        .section-label {
+            display: inline-flex; align-items:center; gap: 8px;
+            font-size: 0.72rem; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 14px; border-radius: 8px;
+            margin-bottom: 12px;
+            border: 1px solid transparent;
+        }
+        .section-label.core {
+            background: linear-gradient(135deg, var(--brand-dim), rgba(0,212,170,0.05));
+            color: var(--brand);
+            border-color: rgba(0,212,170,0.2);
+        }
+        .section-label.value {
+            background: linear-gradient(135deg, var(--gold-dim), rgba(232,184,109,0.05));
+            color: var(--gold);
+            border-color: rgba(232,184,109,0.2);
+        }
+        .section-label.source {
+            background: linear-gradient(135deg, rgba(78,205,196,0.1), rgba(78,205,196,0.03));
+            color: var(--tag-standard);
+            border-color: rgba(78,205,196,0.2);
+        }
+        .section-label::before {
+            content: '';
+            width: 6px; height: 6px; 
+            border-radius: 50%;
+            background: currentColor;
+            box-shadow: 0 0 8px currentColor;
+        }
+
+        /* Score Badge */
+        .score-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            margin-top: 16px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(232,184,109,0.12), rgba(232,184,109,0.04));
+            border: 1px solid rgba(232,184,109,0.2);
+            font-size: 0.8rem; font-weight: 600;
+            color: var(--gold);
+            line-height: 1.5;
+        }
+        .score-badge .score-num {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.2rem; font-weight: 700;
+            color: var(--gold);
+            text-shadow: 0 0 10px rgba(232,184,109,0.4);
+        }
+        .score-badge .score-note {
+            color: var(--text-sec); 
+            font-weight: 400; 
+            font-size: 0.75rem;
+        }
+
+        .section-content {
+            color: var(--text);
+            font-size: 0.9rem;
+            line-height: 1.85;
+            margin-bottom: 20px;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+        .section-content a {
+            color: var(--brand); 
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0,212,170,0.3);
+            transition: all .2s;
+        }
+        .section-content a:hover { 
+            border-color: var(--brand); 
+            text-shadow: 0 0 10px var(--brand-glow);
+        }
+        .section-content:last-child { margin-bottom: 0; }
+        .section-content p { margin-bottom: 14px; }
+        .section-content p:last-child { margin-bottom: 0; }
+        .section-content strong { 
+            color: var(--text-bright); 
+            font-weight: 600;
+            background: linear-gradient(180deg, transparent 60%, rgba(0,212,170,0.15) 60%);
+            padding: 0 2px;
+        }
+
+        /* Highlight Lists */
+        .highlight-list { list-style:none; padding:0; margin: 12px 0; }
+        .highlight-list li {
+            position: relative;
+            padding-left: 26px; margin-bottom: 10px;
+            font-size: 0.88rem; line-height: 1.8;
+            color: var(--text);
+        }
+        .highlight-list li::before {
+            content: ''; position: absolute; left: 0; top: 11px;
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--brand);
+            box-shadow: 0 0 8px var(--brand-glow);
+        }
+
+        /* ===== Divider Between Cards ===== */
+        .section-divider {
+            display: flex; align-items:center; justify-content:center;
+            padding: 12px 0;
+            opacity: 0.6;
+        }
+        .section-divider span {
+            width: 4px; height: 4px; border-radius: 50%;
+            background: var(--text-dim);
+            animation: pulse 2s infinite;
+        }
+        .section-divider span:nth-child(2) {
+            margin: 0 10px; width: 8px; height: 8px;
+            background: var(--brand);
+            box-shadow: 0 0 10px var(--brand-glow);
+            animation-delay: 0.3s;
+        }
+        .section-divider span:nth-child(3) { animation-delay: 0.6s; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.4; }
+            50% { transform: scale(1.3); opacity: 0.8; }
+        }
+
+        /* ===== Quick Glance Section (扩展快览) ===== */
+        .quick-glance-section {
+            margin: 16px 16px 0;
+            background: linear-gradient(135deg, var(--surface) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .quick-glance-section::before {
+            content: '';
+            position: absolute; top:0; left:0; right:0; height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--brand), var(--gold));
+        }
+        .quick-glance-header {
+            padding: 20px 24px 12px;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .quick-glance-title-label {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.2rem; font-weight: 700;
+            color: var(--gold);
+            text-shadow: 0 0 12px var(--gold-dim);
+        }
+        .quick-glance-title-accent {
+            flex: 1; height: 1px;
+            background: linear-gradient(90deg, var(--gold-dim), transparent);
+        }
+        .quick-glance-body {
+            padding: 0 24px 20px;
+        }
+        .quick-glance-item {
+            display: flex; align-items: baseline; gap: 8px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+        .quick-glance-item:last-child { border-bottom: none; }
+        .quick-glance-pin { font-size: 0.85rem; flex-shrink: 0; }
+        .quick-glance-domain {
+            color: var(--brand); font-weight: 600; flex-shrink: 0;
+            padding: 2px 8px; border-radius: 8px;
+            background: var(--brand-dim); font-size: 0.78rem;
+        }
+        .quick-glance-sep { color: var(--text-dim); flex-shrink: 0; }
+        .quick-glance-title { color: var(--text-bright); font-weight: 500; }
+        .quick-glance-dash { color: var(--text-dim); flex-shrink: 0; }
+        .quick-glance-summary { color: var(--text-sec); }
+
+        /* ===== Summary Section ===== */
+        .summary-section {
+            margin: 16px 16px 0;
+            background: linear-gradient(135deg, var(--surface) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            opacity: 0;
+            animation: cardFadeIn .6s ease .7s forwards;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .summary-section::before {
+            content: '';
+            position: absolute; top:0; left:0; right:0; height: 3px;
+            background: linear-gradient(90deg, var(--brand), var(--gold), var(--brand));
+            box-shadow: 0 0 15px var(--brand-glow);
+        }
+        .summary-header {
+            padding: 28px 24px 20px;
+            text-align: center;
+        }
+        .summary-title {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.3rem; font-weight: 700;
+            color: var(--text-bright);
+        }
+        .summary-title-accent {
+            display: block; width: 40px; height: 3px;
+            background: linear-gradient(90deg, var(--brand), var(--gold));
+            margin: 12px auto 0; 
+            border-radius: 3px;
+            box-shadow: 0 0 10px var(--brand-glow);
+        }
+        .summary-body { padding: 0 24px 28px; }
+        .summary-grid { display: flex; flex-direction: column; gap: 16px; }
+
+        .summary-item {
+            padding: 18px;
+            background: linear-gradient(135deg, var(--surface-active), rgba(255,255,255,0.02));
+            border-radius: 14px;
+            border-left: 4px solid var(--brand);
+            transition: all .3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .summary-item::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0; width: 100%;
+            background: linear-gradient(90deg, var(--brand-dim), transparent);
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        .summary-item:hover::before { opacity: 0.5; }
+        .summary-item:nth-child(2) { border-left-color: var(--gold); }
+        .summary-item:nth-child(2)::before { background: linear-gradient(90deg, var(--gold-dim), transparent); }
+        .summary-item:nth-child(3) { border-left-color: var(--tag-standard); }
+        .summary-item:nth-child(3)::before { background: linear-gradient(90deg, rgba(78,205,196,0.1), transparent); }
+        .summary-item:nth-child(4) { border-left-color: var(--tag-market); }
+        .summary-item:nth-child(4)::before { background: linear-gradient(90deg, rgba(167,139,250,0.1), transparent); }
+        .summary-item:hover { transform: translateX(4px); }
+        .summary-item-title {
+            font-size: 0.92rem; font-weight: 600;
+            color: var(--text-bright);
+            margin-bottom: 8px;
+            position: relative;
+        }
+        .summary-item-content {
+            color: var(--text); 
+            font-size: 0.86rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* Recommendations Box */
+        .recommendations {
+            margin-top: 20px;
+            background: linear-gradient(135deg, rgba(0,212,170,0.1) 0%, rgba(232,184,109,0.06) 100%);
+            border: 1px solid rgba(0,212,170,0.15);
+            border-radius: 14px;
+            padding: 22px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .recommendations::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--brand), var(--gold));
+        }
+        .recommendations-title {
+            font-size: 0.88rem; font-weight: 600;
+            color: var(--brand);
+            margin-bottom: 14px;
+            display: flex; align-items:center; gap: 10px;
+        }
+        .recommendations-title::before {
+            content: '';
+            width: 8px; height: 8px;
+            background: var(--brand); 
+            border-radius: 50%;
+            box-shadow: 0 0 12px var(--brand-glow);
+            animation: pulse 2s infinite;
+        }
+        .recommendations-list { list-style:none; padding:0; }
+        .recommendations-list li {
+            position: relative;
+            padding-left: 24px; margin-bottom: 10px;
+            font-size: 0.86rem; line-height: 1.75;
+            color: var(--text);
+        }
+        .recommendations-list li:last-child { margin-bottom: 0; }
+        .recommendations-list li::before {
+            content: '';
+            position: absolute; left: 0; top: 8px;
+            width: 10px; height: 10px;
+            border: 2px solid var(--brand);
+            border-radius: 3px; 
+            transform: rotate(45deg);
+            opacity: 0.8;
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            text-align: center;
+            padding: 32px 20px calc(24px + var(--safe-bottom));
+            border-top: 1px solid var(--border-light);
+            margin-top: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .footer-brand {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.1rem; 
+            color: var(--brand);
+            margin-bottom: 6px;
+            text-shadow: 0 0 15px var(--brand-glow);
+        }
+        .footer-slogan {
+            font-size: 0.8rem; 
+            color: var(--text-dim);
+            letter-spacing: 2px;
+        }
+        .footer-meta {
+            margin-top: 16px;
+            font-size: 0.72rem; 
+            color: var(--text-dim);
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        /* ===== Back to Top Button ===== */
+        .back-top {
+            position: fixed; 
+            bottom: calc(28px + var(--safe-bottom)); 
+            right: 24px;
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, var(--surface-active), var(--surface));
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            display: flex; align-items:center; justify-content:center;
+            color: var(--text-sec); 
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0; 
+            transform: translateY(20px) scale(0.9);
+            transition: all .4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: none;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 150;
+        }
+        .back-top.visible {
+            opacity: 1; 
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+        .back-top:hover {
+            border-color: var(--brand); 
+            color: var(--brand);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(0,212,170,0.2);
+        }
+        .back-top:active { transform: translateY(-2px) scale(0.98); }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 380px) {
+            .card-title { font-size: 1rem; }
+            .section-content { font-size: 0.87rem; }
+            .card-header, .card-body { padding-left: 18px; padding-right: 18px; }
+        }
+
+        @media (min-width: 640px) {
+            .news-list { max-width: 720px; margin: 0 auto; }
+            .summary-section { max-width: 720px; margin-left: auto; margin-right: auto; }
+            .quick-glance-section { max-width: 720px; margin-left: auto; margin-right: auto; }
+            .page-header { padding-left: 40px; padding-right: 40px; }
+        }
+
+        @media print {
+            body { background: #fff; color: #222; }
+            .top-nav, .progress-bar, .back-top, .ambient-bg { display: none; }
+            .news-card { border: 1px solid #ddd; box-shadow: none; background: #fff; }
+            .news-card::before, .news-card::after { display: none; }
+            .card-title { color: #111; }
+            .section-label { background: #f0f0f0; color: #333; }
+        }
+
+        /* ===== Reduced Motion ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg"></div>
+
+    <!-- Reading Progress -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav" id="topNav">
+        <a href="index.html" class="nav-back">
+            <span class="nav-back-arrow">&#8592;</span>
+            <span>返回首页</span>
+        </a>
+        <span class="nav-brand-wrap" style="display:flex;align-items:center;">
+            <img src="knx-logo.png" alt="康诺芯" class="nav-logo">
+            <span class="nav-brand-text">康诺芯</span>
+        </span>
+        <span class="nav-date">2026年4月22日</span>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="header-eyebrow">
+            <span>行业每日要闻</span>
+        </div>
+        <h1 class="header-title">康诺芯行业每日要闻</h1>
+        <p class="header-sub">可穿戴健康监测 · AI辅助诊断 · 慢病管理 · 县域医共体 · 每日精选</p>
+        <div class="header-divider"></div>
+    </header>
+
+    <!-- News List -->
+    <div class="news-list">
+        
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(255,107,107,0.15);color:#FF6B6B;border-color:#FF6B6B30">1</div>
+                <div class="card-meta">
+                    <h3 class="card-title">鱼跃CMEF首发yuwell Watch A1，血压+房颤AI检测腕间一体化</h3>
+                </div>
+                <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15);border-color:#00D4AA40">产品技术</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>4月11日，鱼跃医疗在第93届CMEF全球首发近70款新品，其中最重磅的yuwell Watch A1智能手表集成了鱼跃近20年血压计核心测量技术与自研房颤检测算法，采用多模态信号采集与AI算法融合架构，可同步监测血压趋势、心率、心率变异性、血氧饱和度、心电图及房颤风险预警。同期发布的还有Anytime 5动态血糖仪（MARD 8.58%，行业领先）、健康戒指R3 Pro（医疗级透射式血氧）等AI穿戴新品。鱼跃已与京东健康签署JoyInside接入协议，计划一年内接入100万台智能设备。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content"><p>yuwell Watch A1的"多模态信号采集+AI算法融合"架构与康诺芯AI医疗芯片+可穿戴生命体征闭环高度对标，是最直接的竞品标杆。鱼跃以20年血压计品牌力+渠道优势切入腕式医疗级监测，提示康诺芯需在芯片PPG/ECG多模态融合能力上形成差异化，特别是端侧AI推理的低功耗与高精度优势是关键突破口。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><ul><li>腾讯新闻/财经网：https://news.qq.com/rain/a/20260411A07MA000</li><br/><li>鱼跃医疗官方CMEF发布</li></ul></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">12分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(232,184,109,0.15);color:#E8B86D;border-color:#E8B86D30">2</div>
+                <div class="card-meta">
+                    <h3 class="card-title">中研普华报告称可穿戴医疗设备向千亿级迈进，三大转型方向明确</h3>
+                </div>
+                <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15);border-color:#00D4AA40">产品技术</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content">4月17日，中研普华产业研究院发布《2026-2030年版可穿戴医疗设备市场行情分析及相关技术深度调研报告》。报告指出行业正经历三大深刻转型：从消费级向医疗级转型（消费电子属性向医疗器械属性强化）、从单参数向多模态转型（心电、脉搏波、血氧、体温等多路传感器融合）、从监测向闭环治疗转型（感知-决策-治疗自动化，如CGM联动胰岛素泵形成"人工胰腺"）。CGM为增长最快细分赛道，传感器寿命已延至10-14天；医疗级多导联贴片可连续记录7-14天心电数据，检出率显著高于传统24小时动态心电图。但报告也指出数据临床准确性不足、监管与创新速度矛盾、支付端覆盖滞后三大挑战。</div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content"><p>报告中"从监测向闭环治疗转型"的方向直接验证了康诺芯"检筛诊管"全链闭环的战略定位，"从单参数向多模态转型"与康诺芯AI芯片多模态融合的技术路线高度吻合。支付端覆盖滞后恰恰是端侧AI芯片降低系统成本、加速医保准入的机遇窗口。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><ul><li>中研网/中研普华：https://www.chinairn.com/news/20260417/120107589.shtml</li></ul><br/><li>Business Research Insights全球市场数据（2026年全球可穿戴医疗设备市场471.2亿美元，CAGR 21.49%）：https://www.businessresearchinsights.com/zh/market-reports/wearable-medical-equipment-market-108863</li></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">9分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(167,139,250,0.15);color:#A78BFA;border-color:#A78BFA30">3</div>
+                <div class="card-meta">
+                    <h3 class="card-title">NMPA发布"AI+药品监管"实施意见，三年"春雨行动"加速创新器械审批</h3>
+                </div>
+                <span class="card-tag" style="color:#FF6B6B;background:rgba(255,107,107,0.15);border-color:#FF6B6B40">政策法规</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>4月2日，国家药监局发布《关于"人工智能+药品监管"的实施意见》（国药监综〔2026〕6号），明确到2030年构建"两品一械"审评审批大模型与智能体，重点推进二类器械审评智能化落地。申报资料标准化、结构化将成为刚性要求，AI审查模式下格式不规范将直接影响审评效率。同步启动的三年"春雨行动"为三类器械提供审评前置服务通道，技术审评重心前移至研发阶段，提供专人指导+技术支持。截至2025年底，NMPA已累计批准超200款AI医疗器械三类证，2026年审批节奏显著加快。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content"><p>"春雨行动"对三类创新器械的审评前置与专人指导，直接利好康诺芯AI医疗器械注册申报。AI审评大模型落地意味着申报资料标准化成为刚性要求，康诺芯需提前布局数智化合规能力——芯片级可追溯性与数据完整性或成新卖点，这与FDA/欧盟等国际监管要求趋同，也有利于出海。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><ul><li>新华网：https://www1.xinhuanet.com/health/20260403/40cd881c489a41dc8aec59a34ca1e7c6/c.html</li><br/><li>Pure Global普瑞纯证/大数跨境解读：https://www.10100.com/article/127466162</li></ul></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">8分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(0,212,170,0.15);color:#00D4AA;border-color:#00D4AA30">4</div>
+                <div class="card-meta">
+                    <h3 class="card-title">国办发〔2026〕11号文出台，分级诊疗13项措施明确慢病长处方与基层首诊</h3>
+                </div>
+                <span class="card-tag" style="color:#FF6B6B;background:rgba(255,107,107,0.15);border-color:#FF6B6B40">政策法规</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>4月9日，国务院办公厅发布《关于加快建设分级诊疗体系的若干措施》（国办发〔2026〕11号），提出4大方面13项措施：紧密型医联体内上级医院须在基层开设高血压、糖尿病、慢阻肺等慢病门诊；基层可开具不超过12周的长期处方；探索门诊按人头付费与慢病管理结合的支付方式；建设影像、心电、检验等资源共享中心；不同等级医院住院报销比例拉开10个百分点；到2027年转诊中心全覆盖。4月13日国务院吹风会公布最新数据：全国2199个县已建设运行近3000个紧密型县域医共体，基层诊疗人次占比超63%，7万医生下沉。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content"><p>文件明确推动慢病管理下沉基层，建设影像、心电资源共享中心，意味着基层慢病门诊+远程诊断中心的建设将为可穿戴设备数据接入医共体信息化系统创造新渠道。康诺芯心电、血压等连续监测数据有望成为基层慢病管理的标准化工具，特别是长处方政策延长了慢病随访周期，日常健康监测需求随之增加。</p><p><strong>【战略关联测试】</strong> ✅ 需求侧验证通过——基层慢病门诊+长处方政策直接创造对可穿戴血压/心电监测产品的随访需求；供给侧机遇通过——心电资源共享中心建设为设备数据接入创造新渠道。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><ul><li>中国政府网：https://www.gov.cn/zhengce/zhengceku/202604/content_7065031.htm</li><br/><li>新华网吹风会报道：https://www.xinhuanet.com/politics/20260413/3e4fc212c0f947ed96aaabaed7a9160b/c.html</li></ul></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">8分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(78,205,196,0.15);color:#4ECDC4;border-color:#4ECDC430">5</div>
+                <div class="card-meta">
+                    <h3 class="card-title">紧密型县域医共体实现全覆盖，近3000个医共体进入"内涵建设"阶段</h3>
+                </div>
+                <span class="card-tag" style="color:#FF6B6B;background:rgba(255,107,107,0.15);border-color:#FF6B6B40">政策法规</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>4月13日国务院政策例行吹风会上，国家卫健委基层卫生健康司司长焦雅辉宣布：全国2199个县、县级市和城市的区正在建设运行紧密型县域医共体，建设已实现全覆盖。近3000个医共体内，基层诊疗人次占比超过63%，7万名医生下沉。下一步将重点转向"内涵建设"：强化慢病管理能力、推进县域医疗资源共享中心（影像、心电、检验）建设、提升基层设备配置水平。多省密集启动医共体设备采购招标，涵盖CT、智慧医疗基础设施、综合设备包等，单项目200万至1174万元不等，涉及江西、湖南、四川、陕西、青海、辽宁、贵州等省份。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content"><p>医共体从"全覆盖"转向"内涵建设"，意味着硬件采购从基建型转向能力提升型。心电资源共享中心、远程诊断平台的建设，直接为康诺芯心电AI芯片与可穿戴设备打开了县域采购渠道。多省密集招标释放的设备采购信号，是康诺芯进入县域市场的窗口期。</p><p><strong>【战略关联测试】</strong> ✅ 供给侧机遇通过——医共体统一采购平台上线，心电资源共享中心建设为设备接入打开新渠道；需求侧验证通过——慢病管理能力强化直接创造对可穿戴监测产品的需求。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><ul><li>新华网：https://www.xinhuanet.com/politics/20260413/3e4fc212c0f947ed96aaabaed7a9160b/c.html</li></ul><br/><li>人民网：http://health.people.com.cn/n1/2026/0413/c14739-40700305.html</li><br/><ul><li>中国政府采购网（江西吉水228万、贵州思南1174万）：https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202604/t20260415_26411302.htm</li></ul></div>
+                <div class="score-badge">
+                    <span>相关度评分</span>
+                    <span class="score-num">6分</span>
+                    <span class="score-note">/ 15</span>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- Quick Glance (扩展快览) -->
+    
+    <section class="quick-glance-section">
+        <div class="quick-glance-header">
+            <h2 class="quick-glance-title-label">扩展快览</h2>
+            <span class="quick-glance-title-accent"></span>
+        </div>
+        <div class="quick-glance-body">
+            <div class="quick-glance-item">
+                <span class="quick-glance-pin">📌</span>
+                <span class="quick-glance-domain">县域医共体</span>
+                <span class="quick-glance-sep">|</span>
+                <span class="quick-glance-title">南通"AI+医疗"医共体实践</span>
+                <span class="quick-glance-dash">—</span>
+                <span class="quick-glance-summary">—AI辅助心电诊断3分钟心梗预警，5G+智慧急救"上车即入院"</span>
+            </div>
+
+            <div class="quick-glance-item">
+                <span class="quick-glance-pin">📌</span>
+                <span class="quick-glance-domain">县域医共体</span>
+                <span class="quick-glance-sep">|</span>
+                <span class="quick-glance-title">多省医共体设备采购招标密集启动</span>
+                <span class="quick-glance-dash">—</span>
+                <span class="quick-glance-summary">—江西/湖南/四川/贵州等地CT与智慧医疗采购200-1174万</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-brand">康诺芯</div>
+        <div class="footer-slogan">智芯见康，至心相伴</div>
+        <div class="footer-meta">报告生成时间：2026/04/22 09:49</div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-top" id="backTop" aria-label="返回顶部">&#8593;</button>
+
+    <script>
+    (function() {
+        const progressBar = document.getElementById('progressBar');
+        const backTop = document.getElementById('backTop');
+        const topNav = document.getElementById('topNav');
+
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = progress + '%';
+
+            if (scrollTop > 500) {
+                backTop.classList.add('visible');
+            } else {
+                backTop.classList.remove('visible');
+            }
+
+            if (scrollTop > 100) {
+                topNav.classList.add('scrolled');
+            } else {
+                topNav.classList.remove('scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        updateProgress();
+
+        backTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            try { navigator.vibrate(10); } catch(e) {}
+        });
+
+        document.querySelectorAll('.news-card').forEach(function(card) {
+            card.addEventListener('mousemove', function(e) {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                card.style.setProperty('--mouse-x', x + '%');
+                card.style.setProperty('--mouse-y', y + '%');
+            });
+
+            card.addEventListener('touchstart', function() {
+                try { navigator.vibrate(5); } catch(e) {}
+            }, { passive: true });
+        });
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.news-card, .summary-section, .quick-glance-section').forEach(function(el) {
+            observer.observe(el);
+        });
+    })();
+    </script>
+</body>
+</html>
