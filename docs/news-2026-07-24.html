@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0B1426">
+    <title>2026年7月24日 · 康诺芯行业要闻</title>
+    <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai@latest/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0B1426;
+            --bg-deep: #060D1A;
+            --surface: rgba(255,255,255,0.03);
+            --surface-hover: rgba(255,255,255,0.06);
+            --surface-active: rgba(255,255,255,0.08);
+            --brand: #00D4AA;
+            --brand-dim: rgba(0,212,170,0.12);
+            --brand-glow: rgba(0,212,170,0.25);
+            --gold: #E8B86D;
+            --gold-dim: rgba(232,184,109,0.12);
+            --border: rgba(255,255,255,0.07);
+            --border-light: rgba(255,255,255,0.04);
+            --text: #D8DEE6;
+            --text-bright: #F0F4F8;
+            --text-sec: #8899AA;
+            --text-dim: #4A5B6E;
+            --tag-policy: #FF6B6B;
+            --tag-standard: #4ECDC4;
+            --tag-market: #A78BFA;
+            --tag-tech: #00D4AA;
+            --tag-funding: #E8B86D;
+            --safe-top: env(safe-area-inset-top, 0px);
+            --safe-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+        html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; overflow-x:hidden; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.75;
+            min-height: 100vh;
+            padding-top: var(--safe-top);
+        }
+
+        /* ===== Ambient Background ===== */
+        .ambient-bg {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .ambient-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(ellipse 80% 50% at 20% 40%, rgba(0,212,170,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(232,184,109,0.05) 0%, transparent 40%);
+            animation: ambientMove 20s ease-in-out infinite;
+        }
+        @keyframes ambientMove {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(2%, 2%) rotate(1deg); }
+            66% { transform: translate(-1%, 1%) rotate(-1deg); }
+        }
+
+        /* ===== Reading Progress Bar ===== */
+        .progress-bar {
+            position: fixed; top:0; left:0; height: 3px; z-index: 200;
+            background: linear-gradient(90deg, var(--brand), var(--gold));
+            width: 0%; 
+            transition: width .1s linear;
+            box-shadow: 0 0 10px var(--brand-glow);
+        }
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            right: 0; top: 0; bottom: 0;
+            width: 100px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4));
+            animation: progressGlow 2s ease-in-out infinite;
+        }
+        @keyframes progressGlow {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        /* ===== Top Navigation ===== */
+        .top-nav {
+            position: sticky; top:0; z-index:100;
+            display:flex; align-items:center; justify-content:space-between;
+            padding: 12px 20px;
+            background: rgba(11,20,38,0.85);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border);
+            transition: all .3s ease;
+        }
+        .top-nav.scrolled {
+            background: rgba(11,20,38,0.95);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+        .nav-left { display:flex; align-items:center; gap:12px; }
+        .nav-back {
+            display:flex; align-items:center; gap:6px;
+            color: var(--text-sec); text-decoration:none; font-size:0.85rem;
+            padding: 8px 16px; 
+            border: 1px solid var(--border);
+            border-radius: 24px; 
+            transition: all .25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .nav-back::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--brand-dim), transparent);
+            opacity: 0;
+            transition: opacity .25s;
+        }
+        .nav-back:hover { 
+            border-color: var(--brand); 
+            color: var(--brand);
+            transform: translateX(-2px);
+        }
+        .nav-back:hover::before { opacity: 1; }
+        .nav-back-arrow { font-size: 1rem; transition: transform .2s; }
+        .nav-back:hover .nav-back-arrow { transform: translateX(-3px); }
+        .nav-logo {
+            height: 21px;
+            width: auto;
+            display: block;
+            filter: brightness(0) invert(1) opacity(0.9);
+            transition: opacity .25s;
+        }
+        .nav-brand-text {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.3rem;
+            color: var(--brand);
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-left: 8px;
+            text-shadow: 0 0 14px var(--brand-glow);
+            line-height: 1;
+        }
+        .nav-date {
+            font-size: 0.75rem; 
+            color: var(--brand);
+            background: var(--brand-dim);
+            padding: 5px 14px; 
+            border-radius: 20px;
+            border: 1px solid rgba(0,212,170,0.15);
+            font-weight: 500;
+        }
+
+        /* ===== Page Header ===== */
+        .page-header {
+            position: relative;
+            padding: clamp(40px,10vw,64px) 20px clamp(32px,8vw,48px);
+            text-align: center;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .page-header::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--brand-glow) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .page-header::after {
+            content: '';
+            position: absolute; bottom: 0; left: 10%; right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+        }
+        .header-eyebrow {
+            display: inline-flex; align-items:center; gap:10px;
+            font-size: 0.7rem; 
+            color: var(--brand);
+            letter-spacing: 3px; 
+            text-transform: uppercase;
+            margin-bottom: 16px; 
+            position: relative;
+            font-weight: 500;
+        }
+        .header-eyebrow::before, .header-eyebrow::after {
+            content: ''; width: 32px; height: 1px; 
+            background: linear-gradient(90deg, transparent, var(--brand));
+        }
+        .header-eyebrow::after {
+            background: linear-gradient(90deg, var(--brand), transparent);
+        }
+        .header-title {
+            font-family: 'LXGW WenKai', serif;
+            font-size: clamp(1.8rem, 7vw, 2.8rem);
+            font-weight: 700;
+            color: var(--text-bright);
+            line-height: 1.2;
+            margin-bottom: 12px;
+            position: relative;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+        .header-sub {
+            font-size: 0.95rem; 
+            color: var(--text-sec);
+            font-weight: 300; 
+            position: relative;
+            letter-spacing: 2px;
+        }
+        .header-divider {
+            width: 60px; height: 3px;
+            background: linear-gradient(90deg, var(--brand), var(--gold), var(--brand));
+            margin: 20px auto 0; 
+            border-radius: 3px;
+            position: relative;
+            box-shadow: 0 0 15px var(--brand-glow);
+        }
+
+        /* ===== Floating Particles ===== */
+        .particles {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .particle {
+            position: absolute;
+            width: 4px; height: 4px;
+            background: var(--brand);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 15s infinite ease-in-out;
+        }
+        .particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 80%; top: 40%; animation-delay: 3s; background: var(--gold); }
+        .particle:nth-child(3) { left: 30%; top: 60%; animation-delay: 6s; }
+        .particle:nth-child(4) { left: 70%; top: 80%; animation-delay: 9s; background: var(--gold); }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+            50% { transform: translateY(-30px) scale(1.2); opacity: 0.6; }
+        }
+
+        /* ===== News List ===== */
+        .news-list {
+            padding: 0 16px;
+            display: flex; 
+            flex-direction: column; 
+            gap: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== News Card ===== */
+        .news-card {
+            position: relative;
+            background: linear-gradient(135deg, var(--surface) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            opacity: 0;
+            animation: cardFadeIn .6s ease forwards;
+            transition: all .3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+            border-color: rgba(0,212,170,0.2);
+        }
+        .news-card:nth-child(1) { animation-delay: .1s; }
+        .news-card:nth-child(2) { animation-delay: .2s; }
+        .news-card:nth-child(3) { animation-delay: .3s; }
+        .news-card:nth-child(4) { animation-delay: .4s; }
+        .news-card:nth-child(5) { animation-delay: .5s; }
+        @keyframes cardFadeIn {
+            from { opacity:0; transform: translateY(24px) scale(0.98); }
+            to { opacity:1; transform: translateY(0) scale(1); }
+        }
+
+        /* Card Top Accent Line */
+        .news-card::before {
+            content: '';
+            position: absolute; top:0; left:0; right:0; height: 3px;
+            background: linear-gradient(90deg, var(--brand), var(--gold), transparent 70%);
+            opacity: 0.8;
+        }
+
+        /* Card Glow Effect */
+        .news-card::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0,212,170,0.1) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity .3s;
+            pointer-events: none;
+        }
+        .news-card:hover::after { opacity: 1; }
+
+        .card-header {
+            padding: 32px 24px 0;
+            display: flex; align-items: flex-start; gap: 16px;
+            position: relative;
+        }
+        .card-index {
+            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            width: 44px; height: 44px;
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.2rem; font-weight: 700;
+            border-radius: 12px;
+            border: 1px solid;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all .3s ease;
+            margin-top: 4px;
+        }
+        .news-card:hover .card-index {
+            transform: scale(1.08);
+        }
+        .card-tag {
+            position: absolute;
+            top: 24px; right: 20px;
+            font-size: 0.7rem; font-weight: 600;
+            padding: 5px 14px; border-radius: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 1px solid;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: all .3s ease;
+        }
+        .news-card:hover .card-tag {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .card-meta { flex: 1; padding-top: 6px; padding-right: 80px; }
+        .card-title {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.1rem; font-weight: 600;
+            color: var(--text-bright);
+            line-height: 1.5;
+            transition: color .3s;
+        }
+        .news-card:hover .card-title { color: var(--brand); }
+        .card-body { padding: 20px 24px 24px; }
+
+        /* Section Labels */
+        .section-label {
+            display: inline-flex; align-items:center; gap: 8px;
+            font-size: 0.72rem; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 14px; border-radius: 8px;
+            margin-bottom: 12px;
+            border: 1px solid transparent;
+        }
+        .section-label.core {
+            background: linear-gradient(135deg, var(--brand-dim), rgba(0,212,170,0.05));
+            color: var(--brand);
+            border-color: rgba(0,212,170,0.2);
+        }
+        .section-label.value {
+            background: linear-gradient(135deg, var(--gold-dim), rgba(232,184,109,0.05));
+            color: var(--gold);
+            border-color: rgba(232,184,109,0.2);
+        }
+        .section-label.source {
+            background: linear-gradient(135deg, rgba(78,205,196,0.1), rgba(78,205,196,0.03));
+            color: var(--tag-standard);
+            border-color: rgba(78,205,196,0.2);
+        }
+        .section-label::before {
+            content: '';
+            width: 6px; height: 6px; 
+            border-radius: 50%;
+            background: currentColor;
+            box-shadow: 0 0 8px currentColor;
+        }
+
+        /* Score Badge */
+        .score-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            margin-top: 16px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(232,184,109,0.12), rgba(232,184,109,0.04));
+            border: 1px solid rgba(232,184,109,0.2);
+            font-size: 0.8rem; font-weight: 600;
+            color: var(--gold);
+            line-height: 1.5;
+        }
+        .score-badge .score-num {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.2rem; font-weight: 700;
+            color: var(--gold);
+            text-shadow: 0 0 10px rgba(232,184,109,0.4);
+        }
+        .score-badge .score-note {
+            color: var(--text-sec); 
+            font-weight: 400; 
+            font-size: 0.75rem;
+        }
+
+        .section-content {
+            color: var(--text);
+            font-size: 0.9rem;
+            line-height: 1.85;
+            margin-bottom: 20px;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+        .section-content a {
+            color: var(--brand); 
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0,212,170,0.3);
+            transition: all .2s;
+        }
+        .section-content a:hover { 
+            border-color: var(--brand); 
+            text-shadow: 0 0 10px var(--brand-glow);
+        }
+        .section-content:last-child { margin-bottom: 0; }
+        .section-content p { margin-bottom: 14px; }
+        .section-content p:last-child { margin-bottom: 0; }
+        .section-content strong { 
+            color: var(--text-bright); 
+            font-weight: 600;
+            background: linear-gradient(180deg, transparent 60%, rgba(0,212,170,0.15) 60%);
+            padding: 0 2px;
+        }
+
+        /* Highlight Lists */
+        .highlight-list { list-style:none; padding:0; margin: 12px 0; }
+        .highlight-list li {
+            position: relative;
+            padding-left: 26px; margin-bottom: 10px;
+            font-size: 0.88rem; line-height: 1.8;
+            color: var(--text);
+        }
+        .highlight-list li::before {
+            content: ''; position: absolute; left: 0; top: 11px;
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--brand);
+            box-shadow: 0 0 8px var(--brand-glow);
+        }
+
+        /* ===== Divider Between Cards ===== */
+        .section-divider {
+            display: flex; align-items:center; justify-content:center;
+            padding: 12px 0;
+            opacity: 0.6;
+        }
+        .section-divider span {
+            width: 4px; height: 4px; border-radius: 50%;
+            background: var(--text-dim);
+            animation: pulse 2s infinite;
+        }
+        .section-divider span:nth-child(2) {
+            margin: 0 10px; width: 8px; height: 8px;
+            background: var(--brand);
+            box-shadow: 0 0 10px var(--brand-glow);
+            animation-delay: 0.3s;
+        }
+        .section-divider span:nth-child(3) { animation-delay: 0.6s; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.4; }
+            50% { transform: scale(1.3); opacity: 0.8; }
+        }
+
+        /* ===== Quick Glance Section (扩展快览) ===== */
+        .quick-glance-section {
+            margin: 16px 16px 0;
+            background: linear-gradient(135deg, var(--surface) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .quick-glance-section::before {
+            content: '';
+            position: absolute; top:0; left:0; right:0; height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--brand), var(--gold));
+        }
+        .quick-glance-header {
+            padding: 20px 24px 12px;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .quick-glance-title-label {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.2rem; font-weight: 700;
+            color: var(--gold);
+            text-shadow: 0 0 12px var(--gold-dim);
+        }
+        .quick-glance-title-accent {
+            flex: 1; height: 1px;
+            background: linear-gradient(90deg, var(--gold-dim), transparent);
+        }
+        .quick-glance-body {
+            padding: 0 24px 20px;
+        }
+        .quick-glance-item {
+            display: flex; align-items: baseline; gap: 8px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+        .quick-glance-item:last-child { border-bottom: none; }
+        .quick-glance-pin { font-size: 0.85rem; flex-shrink: 0; }
+        .quick-glance-domain {
+            color: var(--brand); font-weight: 600; flex-shrink: 0;
+            padding: 2px 8px; border-radius: 8px;
+            background: var(--brand-dim); font-size: 0.78rem;
+        }
+        .quick-glance-sep { color: var(--text-dim); flex-shrink: 0; }
+        .quick-glance-title { color: var(--text-bright); font-weight: 500; }
+        .quick-glance-dash { color: var(--text-dim); flex-shrink: 0; }
+        .quick-glance-summary { color: var(--text-sec); }
+
+        /* ===== Summary Section ===== */
+        .summary-section {
+            margin: 16px 16px 0;
+            background: linear-gradient(135deg, var(--surface) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            opacity: 0;
+            animation: cardFadeIn .6s ease .7s forwards;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .summary-section::before {
+            content: '';
+            position: absolute; top:0; left:0; right:0; height: 3px;
+            background: linear-gradient(90deg, var(--brand), var(--gold), var(--brand));
+            box-shadow: 0 0 15px var(--brand-glow);
+        }
+        .summary-header {
+            padding: 28px 24px 20px;
+            text-align: center;
+        }
+        .summary-title {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.3rem; font-weight: 700;
+            color: var(--text-bright);
+        }
+        .summary-title-accent {
+            display: block; width: 40px; height: 3px;
+            background: linear-gradient(90deg, var(--brand), var(--gold));
+            margin: 12px auto 0; 
+            border-radius: 3px;
+            box-shadow: 0 0 10px var(--brand-glow);
+        }
+        .summary-body { padding: 0 24px 28px; }
+        .summary-grid { display: flex; flex-direction: column; gap: 16px; }
+
+        .summary-item {
+            padding: 18px;
+            background: linear-gradient(135deg, var(--surface-active), rgba(255,255,255,0.02));
+            border-radius: 14px;
+            border-left: 4px solid var(--brand);
+            transition: all .3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .summary-item::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0; width: 100%;
+            background: linear-gradient(90deg, var(--brand-dim), transparent);
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        .summary-item:hover::before { opacity: 0.5; }
+        .summary-item:nth-child(2) { border-left-color: var(--gold); }
+        .summary-item:nth-child(2)::before { background: linear-gradient(90deg, var(--gold-dim), transparent); }
+        .summary-item:nth-child(3) { border-left-color: var(--tag-standard); }
+        .summary-item:nth-child(3)::before { background: linear-gradient(90deg, rgba(78,205,196,0.1), transparent); }
+        .summary-item:nth-child(4) { border-left-color: var(--tag-market); }
+        .summary-item:nth-child(4)::before { background: linear-gradient(90deg, rgba(167,139,250,0.1), transparent); }
+        .summary-item:hover { transform: translateX(4px); }
+        .summary-item-title {
+            font-size: 0.92rem; font-weight: 600;
+            color: var(--text-bright);
+            margin-bottom: 8px;
+            position: relative;
+        }
+        .summary-item-content {
+            color: var(--text); 
+            font-size: 0.86rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* Recommendations Box */
+        .recommendations {
+            margin-top: 20px;
+            background: linear-gradient(135deg, rgba(0,212,170,0.1) 0%, rgba(232,184,109,0.06) 100%);
+            border: 1px solid rgba(0,212,170,0.15);
+            border-radius: 14px;
+            padding: 22px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .recommendations::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--brand), var(--gold));
+        }
+        .recommendations-title {
+            font-size: 0.88rem; font-weight: 600;
+            color: var(--brand);
+            margin-bottom: 14px;
+            display: flex; align-items:center; gap: 10px;
+        }
+        .recommendations-title::before {
+            content: '';
+            width: 8px; height: 8px;
+            background: var(--brand); 
+            border-radius: 50%;
+            box-shadow: 0 0 12px var(--brand-glow);
+            animation: pulse 2s infinite;
+        }
+        .recommendations-list { list-style:none; padding:0; }
+        .recommendations-list li {
+            position: relative;
+            padding-left: 24px; margin-bottom: 10px;
+            font-size: 0.86rem; line-height: 1.75;
+            color: var(--text);
+        }
+        .recommendations-list li:last-child { margin-bottom: 0; }
+        .recommendations-list li::before {
+            content: '';
+            position: absolute; left: 0; top: 8px;
+            width: 10px; height: 10px;
+            border: 2px solid var(--brand);
+            border-radius: 3px; 
+            transform: rotate(45deg);
+            opacity: 0.8;
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            text-align: center;
+            padding: 32px 20px calc(24px + var(--safe-bottom));
+            border-top: 1px solid var(--border-light);
+            margin-top: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .footer-brand {
+            font-family: 'LXGW WenKai', serif;
+            font-size: 1.1rem; 
+            color: var(--brand);
+            margin-bottom: 6px;
+            text-shadow: 0 0 15px var(--brand-glow);
+        }
+        .footer-slogan {
+            font-size: 0.8rem; 
+            color: var(--text-dim);
+            letter-spacing: 2px;
+        }
+        .footer-meta {
+            margin-top: 16px;
+            font-size: 0.72rem; 
+            color: var(--text-dim);
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        /* ===== Back to Top Button ===== */
+        .back-top {
+            position: fixed; 
+            bottom: calc(28px + var(--safe-bottom)); 
+            right: 24px;
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, var(--surface-active), var(--surface));
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            display: flex; align-items:center; justify-content:center;
+            color: var(--text-sec); 
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0; 
+            transform: translateY(20px) scale(0.9);
+            transition: all .4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: none;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 150;
+        }
+        .back-top.visible {
+            opacity: 1; 
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+        .back-top:hover {
+            border-color: var(--brand); 
+            color: var(--brand);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(0,212,170,0.2);
+        }
+        .back-top:active { transform: translateY(-2px) scale(0.98); }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 380px) {
+            .card-title { font-size: 1rem; }
+            .section-content { font-size: 0.87rem; }
+            .card-header, .card-body { padding-left: 18px; padding-right: 18px; }
+        }
+
+        @media (min-width: 640px) {
+            .news-list { max-width: 720px; margin: 0 auto; }
+            .summary-section { max-width: 720px; margin-left: auto; margin-right: auto; }
+            .quick-glance-section { max-width: 720px; margin-left: auto; margin-right: auto; }
+            .page-header { padding-left: 40px; padding-right: 40px; }
+        }
+
+        @media print {
+            body { background: #fff; color: #222; }
+            .top-nav, .progress-bar, .back-top, .ambient-bg { display: none; }
+            .news-card { border: 1px solid #ddd; box-shadow: none; background: #fff; }
+            .news-card::before, .news-card::after { display: none; }
+            .card-title { color: #111; }
+            .section-label { background: #f0f0f0; color: #333; }
+        }
+
+        /* ===== Reduced Motion ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg"></div>
+
+    <!-- Reading Progress -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav" id="topNav">
+        <a href="index.html" class="nav-back">
+            <span class="nav-back-arrow">&#8592;</span>
+            <span>返回首页</span>
+        </a>
+        <span class="nav-brand-wrap" style="display:flex;align-items:center;">
+            <img src="knx-logo.png" alt="康诺芯" class="nav-logo">
+            <span class="nav-brand-text">康诺芯</span>
+        </span>
+        <span class="nav-date">2026年7月24日</span>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="header-eyebrow">
+            <span>行业每日要闻</span>
+        </div>
+        <h1 class="header-title">康诺芯行业每日要闻</h1>
+        <p class="header-sub">可穿戴健康监测 · AI辅助诊断 · 慢病管理 · 县域医共体 · 每日精选</p>
+        <div class="header-divider"></div>
+    </header>
+
+    <!-- News List -->
+    <div class="news-list">
+        
+        <div class="news-section-header section-header-dom">
+            <h2 class="section-header-title">🇨🇳 国内要闻</h2>
+            <span class="section-header-accent"></span>
+        </div>
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(255,107,107,0.15);color:#FF6B6B;border-color:#FF6B6B30">1</div>
+                <div class="card-meta">
+                    <h3 class="card-title">紧密型县域医共体建设加速——自治州现场推进会召开</h3>
+                </div>
+                <span class="card-tag" style="color:#FF6B6B;background:rgba(255,107,107,0.15);border-color:#FF6B6B40">政策法规</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>7月17日，2026年自治州紧密型县域医共体建设现场推进会在轮台县召开，全面总结交流全州县域医共体建设成效与进展，研究部署下一阶段重点工作。这是国务院办公厅4月印发《关于加快建设分级诊疗体系的若干措施》后，地方层面密集落地的又一关键动作。措施明确提出以紧密型医联体为抓手完善分级诊疗协同机制，到2030年基本建立分级诊疗协同机制。重庆市、资阳市等多地已在其"十五五"规划纲要中将县域医共体建设列入核心任务，推动优质医疗资源扩容下沉和区域均衡布局。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content">本条涉及【D-医共体/基层】与【E-政策/商业】方向。  <br/><p>核心信息：国家级分级诊疗政策框架落地后，地方县域医共体建设进入加速期。  <br/>对远程监测设备商的意义：县域医共体建设要求实现"人员、技术、服务和管理下沉"，基层医疗机构的检查监测能力提升是核心抓手——心电、血压等远程监测设备在"心电一张网"等场景中的配置需求将持续增长。  <br/>对政策合规参考：分级诊疗体系对"常见病、多发病到基层解决"的导向，强化了院外监测、居家监测的合理性，为远程监测设备的医保准入提供了政策基础。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>国新办（政策吹风会）：<a href="http://www.scio.gov.cn/live/2026/38302/qwxz/202604/P020260414399511487806.pdf" target="_blank" class="source-link">政府官网</a></li><br/><li>国家医保局：<a href="https://www.nhsa.gov.cn/art/2026/4/10/art_14_20158.html" target="_blank" class="source-link">国家医保局官网</a></li><br/><li>腾讯新闻（现场推进会报道）：<a href="https://news.qq.com/rain/a/20260717A0C7TC00" target="_blank" class="source-link">腾讯新闻</a></li></div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(232,184,109,0.15);color:#E8B86D;border-color:#E8B86D30">2</div>
+                <div class="card-meta">
+                    <h3 class="card-title">云南江川区以数智之力赋能全民健康——可穿戴设备远程监测落地</h3>
+                </div>
+                <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15);border-color:#00D4AA40">产品技术</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>云南省江川区在"十五五"规划框架下推进全民健康数字化建设，将可穿戴设备实时监测纳入区域卫生健康服务体系。方案提出推动5G+AR/VR用于远程查房、手术指导，医疗机器人赋能精准操作与远程诊疗，同时通过可穿戴设备实现慢病患者的居家健康监测和风险预警，结合医生个性化干预实现慢病全程管理闭环。这是县域层面将可穿戴监测从"概念"推进到"服务配置"的典型案例。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content">本条涉及【A-可穿戴生命体征】与【C-慢病管理】方向。  <br/><p>核心信息：县级政府将可穿戴设备远程监测纳入区域卫生健康服务规划，是"主动健康"从政策到实践的关键一步。  <br/>对远程监测设备商的意义：江川区案例验证了县域医疗场景对可穿戴监测设备的真实需求——基层医疗机构缺乏大型诊断设备，便携式、远程化的心电/血压/血氧监测设备是其能力提升的最优解。县域市场的采购决策正在从"要不要"转向"怎么配"。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>江川区政府信息公开：<a href="https://www.ynjc.gov.cn/jcqzfxxgk/zxgkxx4199/20260622/1667774.html" target="_blank" class="source-link">政府官网</a></li></div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(167,139,250,0.15);color:#A78BFA;border-color:#A78BFA30">3</div>
+                <div class="card-meta">
+                    <h3 class="card-title">2026H1医疗健康投融资725.6亿元，同比增长41.7%</h3>
+                </div>
+                <span class="card-tag" style="color:#A78BFA;background:rgba(167,139,250,0.15);border-color:#A78BFA40">市场洞察</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>2026年上半年，中国医疗健康领域共发生814起投融资事件，同比增长13.8%；融资金额总计725.6亿元人民币，同比增长41.7%。在经历前几年的深度调整后，医疗健康投融资呈现明显的量价齐升态势。其中医疗器械、数字健康和AI医疗是三大增长极。从融资轮次看，早期项目（天使轮至A轮）占比上升，显示资本对创新技术的偏好增强。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content">本条涉及【E-政策/商业】方向。  <br/><p>核心信息：医疗健康投融资在2026上半年强劲复苏，725.6亿元融资规模显示赛道信心回归。  <br/>对远程监测设备商的意义：医疗器械和数字健康是增长极——心电、血压、血氧等可穿戴监测设备同时横跨这两个赛道，融资回暖意味着行业整体估值中枢上移、人才和渠道资源更易获取。早期项目占比上升也提示创新窗口仍然存在，技术差异化是新进入者的核心壁垒。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>动脉网/网易转载：<a href="https://www.163.com/dy/article/L29FO5OQ0534Q32Z.html" target="_blank" class="source-link">网易新闻</a></li></div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(0,212,170,0.15);color:#00D4AA;border-color:#00D4AA30">4</div>
+                <div class="card-meta">
+                    <h3 class="card-title">合源医疗完成超亿元融资，突破性技术赋能心衰管理</h3>
+                </div>
+                <span class="card-tag" style="color:#E8B86D;background:rgba(232,184,109,0.15);border-color:#E8B86D40">资本动态</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>上海合源医疗完成超亿元的新一轮融资，由龙磐投资和道彤投资联合领投，楹联健康基金和天瑞丰年跟投，现有股东礼来亚洲继续加持。合源医疗深耕三类有源植入心衰和CRM（心脏节律管理）领域30余年，核心技术聚焦心衰患者的长期监测与干预。本轮融资将用于加速其植入式心电监测和心衰管理系统的临床推进与商业化。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content">本条涉及【A-可穿戴生命体征】与【C-慢病管理】方向。  <br/><p>核心信息：心衰管理赛道获得超亿元资本加持，植入式+可穿戴心电监测是核心方向。  <br/>对远程监测设备商的意义：合源医疗的心衰管理定位与院外心电长程监测高度重叠——同一赛道的大额融资验证了市场对"连续心电监测+慢病管理"方向的认可，也为同类产品的商业化和医保准入提供了参照。心衰作为心血管疾病的终末阶段，其管理需求对监测精度、长程连续性和预警能力提出了最高标准。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>动脉网/医药魔方：<a href="https://bydrug.pharmcube.com/news/detail/543d998f496f59df569ccc015585df4f" target="_blank" class="source-link">bydrug.pharmcube.com</a></li><br/><li>投资界：<a href="https://news.pedaily.cn/202504/548672.shtml" target="_blank" class="source-link">news.pedaily.cn</a></li></div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(78,205,196,0.15);color:#4ECDC4;border-color:#4ECDC430">5</div>
+                <div class="card-meta">
+                    <h3 class="card-title">WAIC 2026——AI医疗全栈方案集中亮相，从影像到慢病管理</h3>
+                </div>
+                <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15);border-color:#00D4AA40">产品技术</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>2026世界人工智能大会（WAIC 2026）于7月17日至20日在上海举办，主题为"智能伙伴，共创未来"。医疗赛道展出多项硬核成果：讯飞医疗展出全栈数智方案，覆盖AI辅助诊断、慢病管理、智慧医院等场景；联影智能的"元智"AI医疗影像大模型支持10+影像模态和300+分割任务；中国科学院联合发布磐石·科学基础大模型2.0。AI医疗从影像诊断向慢病管理、患者教育、临床决策支持等更广泛场景延伸的趋势明显。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content">本条涉及【B-AI医疗】方向。  <br/><p>核心信息：AI医疗应用从影像诊断向慢病管理延伸，全栈方案成为主流。  <br/>对远程监测设备商的意义：WAIC展示的AI能力图谱中，慢病管理和患者教育场景与可穿戴监测设备天然互补——监测设备产生连续数据，AI分析将数据转化为临床决策支持。两类产品的整合正在成为行业趋势，"硬件采集+AI分析"的一体化方案更受医院端青睐。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>世界人工智能大会官网：<a href="https://www.worldaic.com.cn/" target="_blank" class="source-link">worldaic.com.cn</a></li><br/><li>搜狐/讯飞医疗报道：<a href="https://www.sohu.com/a/1053432265_121955537" target="_blank" class="source-link">搜狐新闻</a></li><br/><li>东方财富/WAIC报道：<a href="https://wap.eastmoney.com/a/202607173811323544.html" target="_blank" class="source-link">东方财富网</a></li></div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <div class="news-section-header section-header-intl">
+            <h2 class="section-header-title">🌍 国际要闻</h2>
+            <span class="section-header-accent"></span>
+        </div>
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(255,107,107,0.15);color:#FF6B6B;border-color:#FF6B6B30">6</div>
+                <div class="card-meta">
+                    <h3 class="card-title">UPMC大规模试验——远程患者监测未降低脓毒症患者再入院率</h3>
+                </div>
+                <span class="card-tag" style="color:#A78BFA;background:rgba(167,139,250,0.15);border-color:#A78BFA40">市场洞察</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>匹兹堡大学医学中心（UPMC）发布了一项迄今为止规模最大的远程患者监测（RPM）随机对照试验结果。研究聚焦出院后的老年脓毒症患者，发现RPM组患者的30天再入院率反而高于常规护理组。这一反直觉的结果与此前多项显示RPM可降低再入院率的观察性研究形成鲜明对比。研究者指出，RPM监测到的异常数据可能触发更多的急诊就诊和再入院——"更多监测"不一定等于"更好结果"，监测后的临床响应机制才是关键变量。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content">本条涉及【A-可穿戴生命体征】与【B-AI医疗】方向。  <br/><p>核心信息：最大规模RPM试验发现远程监测未降低再入院率，对"监测越多越好"的假设提出挑战。  <br/>对远程监测设备商的意义：UPMC的阴性结果不是对RPM的否定，而是对RPM实施方式的校准——单纯采集数据不足以改善结果，必须配套"监测→预警→临床响应"的完整闭环。对于心电长程监测等产品，这意味着不能仅提供设备+数据，还需要提供分诊建议、异常事件优先级排序等AI辅助决策能力。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>UPMC官方新闻：<a href="https://www.upmc.com/media/news/061126-remote-patient-monitoring-sepsis-readmiss" target="_blank" class="source-link">upmc.com</a></li></div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(232,184,109,0.15);color:#E8B86D;border-color:#E8B86D30">7</div>
+                <div class="card-meta">
+                    <h3 class="card-title">UnitedHealthcare限制2026年RPM覆盖——支付方对远程监测的态度转向</h3>
+                </div>
+                <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15);border-color:#00D4AA40">产品技术</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>美国最大商业保险公司UnitedHealthcare在2026年调整了远程患者监测（RPM）的报销政策，收窄覆盖范围。此前RPM被视为降低医疗成本的关键手段，但UnitedHealthcare认为当前证据不足以支持大规模的RPM覆盖扩张。不过数据同时显示，参与RPM的患者在90天内急诊就诊率更低，一年内死亡率低16%。支付方正从"宽进"转向"严选"——只覆盖有明确临床证据支持的患者群体和监测项目。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content">本条涉及【C-慢病管理】与【E-政策/商业】方向。  <br/><p>核心信息：美国最大支付方收紧RPM报销，信号明确——远程监测需要更强的临床证据来支撑支付。  <br/>对远程监测设备商的意义：UnitedHealthcare的政策转向是全球支付环境的先导信号。中国市场虽以公立医保为主，但商业健康险正在快速渗透——未来远程监测设备的商业化路径必须包含临床经济学数据（如降低再入院率、减少急诊次数等），仅凭"技术先进"无法说服支付方。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>Prevounce博客/政策分析：<a href="https://blog.prevounce.com/unitedhealthcares-2026-rpm-rollback-why-limiting-remo" target="_blank" class="source-link">blog.prevounce.com</a></li><br/><li>UPMC试验数据交叉验证：<a href="https://www.upmc.com/media/news/061126-remote-patient-monitoring-sepsis-readmiss" target="_blank" class="source-link">upmc.com</a></li></div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(167,139,250,0.15);color:#A78BFA;border-color:#A78BFA30">8</div>
+                <div class="card-meta">
+                    <h3 class="card-title">HBR——集成可穿戴技术如何塑造下一代医疗健康</h3>
+                </div>
+                <span class="card-tag" style="color:#00D4AA;background:rgba(0,212,170,0.15);border-color:#00D4AA40">产品技术</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>《哈佛商业评论》（HBR）发表赞助深度文章，探讨集成可穿戴技术如何重塑医疗服务模式。文章指出，连续监测在术后恢复和慢病管理的关键窗口期给临床医生持续洞察，支持主动管理而非被动响应。新一代可穿戴设备正从"单参数测量"向"多体征融合"演进——斑贴、生物传感器和智能织物等新形态让监测更无感、数据更连续。文章同时强调，技术集成（而非单一设备）才是价值创造的关键：可穿戴+AI分析+临床工作流整合的三位一体。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content">本条涉及【A-可穿戴生命体征】与【B-AI医疗】方向。  <br/><p>核心信息：HBR定位可穿戴+AI+临床工作流整合为下一代医疗的核心架构。  <br/>对远程监测设备商的意义：HBR的"三位一体"框架——设备采集+AI分析+临床整合——精准描述了可穿戴医疗设备从"卖硬件"到"卖解决方案"的进化方向。心电长程监测等产品如果仅停留在"提供心电数据"，将很快被整合型方案替代。必须在AI分析和临床工作流嵌入两个维度持续投入。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>Harvard Business Review：<a href="https://hbr.org/sponsored/2026/04/how-integrated-wearable-technologies-are-shapi" target="_blank" class="source-link">hbr.org</a></li><br/><strong>【相关度评分</strong>7分**（P5b=HBR权威平台+可穿戴医疗战略框架+直接指导产品方向；来源等级A）</div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(0,212,170,0.15);color:#00D4AA;border-color:#00D4AA30">9</div>
+                <div class="card-meta">
+                    <h3 class="card-title">FDA发布2026年数字健康新规——放宽AI/可穿戴设备监管门槛</h3>
+                </div>
+                <span class="card-tag" style="color:#FF6B6B;background:rgba(255,107,107,0.15);border-color:#FF6B6B40">政策法规</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>美国FDA于2026年1月发布重大政策调整，放宽对部分AI健康软件和可穿戴设备的监管要求。新规将血压监测、血糖监测等功能的通用健康设备从FDA监管范围中豁免，仅保留对临床诊断和治疗决策类AI的审查。截至2026年，FDA已通过现有路径批准超过1,300个AI/ML医疗设备。此次政策转向标志着FDA从"设备功能监管"向"临床风险监管"的范式转换——低风险的日常健康监测不再需要漫长的审批流程。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content">本条涉及【E-政策/商业】与【A-可穿戴生命体征】方向。  <br/><p>核心信息：FDA系统性放宽非诊断类可穿戴设备和AI工具的监管，加速消费级医疗产品入市。</p><br/>对远程监测设备商的意义：FDA的监管范式转变是全球医疗器械监管的风向标。中国NMPA的II类/III类分类逻辑与FDA新规思路趋同——"风险等级决定监管强度"。这意味着院外监测、健康筛查类产品的注册门槛可能进一步降低，合规成本和时间窗口将显著改善。但诊断级产品（如AI-ECG临床诊断）仍将保持高监管标准，企业需在产品定位时明确"健康监测"vs"临床诊断"的分界线。</div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>Reuters：<a href="https://www.reuters.com/business/healthcare-pharmaceuticals/us-fda-limit-regulat" target="_blank" class="source-link">reuters.com</a></li><br/><li>MedTech Dive：<a href="https://www.medtechdive.com/news/fda-exempts-wearable-ai-features-guidance/80909" target="_blank" class="source-link">medtechdive.com</a></li><br/><li>McDermott Law分析：<a href="https://www.mcdermottlaw.com/insights/fda-loosens-the-reins-new-ai-and-wearables" target="_blank" class="source-link">mcdermottlaw.com</a></li></div>
+            </div>
+        </article>
+        <div class="section-divider"><span></span><span></span><span></span></div>
+
+        <article class="news-card">
+            <div class="card-header">
+                <div class="card-index" style="background:rgba(78,205,196,0.15);color:#4ECDC4;border-color:#4ECDC430">10</div>
+                <div class="card-meta">
+                    <h3 class="card-title">美国远程患者监测市场2033年将达495亿美元——年复合增长16.3%</h3>
+                </div>
+                <span class="card-tag" style="color:#A78BFA;background:rgba(167,139,250,0.15);border-color:#A78BFA40">市场洞察</span>
+            </div>
+            <div class="card-body">
+                <div class="section-label core">核心内容</div>
+                <div class="section-content"><p>根据Coherent Market Insights最新报告，美国远程患者监测（RPM）市场预计从2026年的172亿美元增长至2033年的495亿美元，年复合增长率16.3%。增长驱动力包括：慢性病患病率上升、医院向"居家医院"模式转型、以及AI驱动的预测分析能力增强。报告特别指出，心血管疾病和糖尿病的远程监测是最大的两个细分市场，合计占RPM市场的60%以上。</p></div>
+                <div class="section-label value">关注价值</div>
+                <div class="section-content">本条涉及【C-慢病管理】与【E-政策/商业】方向。  <br/><p>核心信息：美国RPM市场8年内翻近3倍，心血管和糖尿病监测为最大细分市场。  <br/>对远程监测设备商的意义：495亿美元的市场规模验证了远程监测赛道的长期增长性。心血管监测作为最大细分市场，与心电长程监测的产品定位高度契合。16.3%的年复合增长率意味着市场仍在快速扩张期——现在是建立品牌认知和渠道壁垒的关键窗口。但需注意，美国市场的支付环境正在收紧（见要闻7），增长不会自动转化为盈利。</p></div>
+                <div class="section-label source">来源验证</div>
+                <div class="section-content"><li>Coherent Market Insights：<a href="https://www.coherentmarketinsights.com/industry-reports/us-remote-patient-monito" target="_blank" class="source-link">coherentmarketinsights.com</a></li></div>
+            </div>
+        </article>
+    </div>
+
+    <!-- Quick Glance (扩展快览) -->
+    
+
+    <!-- Summary Section -->
+    
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-brand">康诺芯</div>
+        <div class="footer-slogan">智芯见康，至心相伴</div>
+        <div class="footer-meta">报告生成时间：2026/07/24 09:44</div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-top" id="backTop" aria-label="返回顶部">&#8593;</button>
+
+    <script>
+    (function() {
+        const progressBar = document.getElementById('progressBar');
+        const backTop = document.getElementById('backTop');
+        const topNav = document.getElementById('topNav');
+
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = progress + '%';
+
+            if (scrollTop > 500) {
+                backTop.classList.add('visible');
+            } else {
+                backTop.classList.remove('visible');
+            }
+
+            if (scrollTop > 100) {
+                topNav.classList.add('scrolled');
+            } else {
+                topNav.classList.remove('scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        updateProgress();
+
+        backTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            try { navigator.vibrate(10); } catch(e) {}
+        });
+
+        document.querySelectorAll('.news-card').forEach(function(card) {
+            card.addEventListener('mousemove', function(e) {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                card.style.setProperty('--mouse-x', x + '%');
+                card.style.setProperty('--mouse-y', y + '%');
+            });
+
+            card.addEventListener('touchstart', function() {
+                try { navigator.vibrate(5); } catch(e) {}
+            }, { passive: true });
+        });
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.news-card, .summary-section, .quick-glance-section').forEach(function(el) {
+            observer.observe(el);
+        });
+    })();
+    </script>
+</body>
+</html>
